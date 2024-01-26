@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import etteLogo from "@assets/ettelogo.webp";
+import Nav from "./Nav.astro";
+---
+
+<header class="header">
+  <h1 class="ette-logo">
+    <a href="/winter2024">
+      <Image alt="Ette literary magizine logo." src={etteLogo} />
+    </a>
+  </h1>
+  <Nav />
+</header>
+
+<style>
+  .header {
+    display: grid;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+</style>

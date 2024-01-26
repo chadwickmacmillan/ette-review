@@ -44,20 +44,27 @@ import NavToggler from "./NavToggler.astro";
     }
   });
 </script>
+
 <nav class="nav-container">
   <NavToggler />
   <ul class="nav" id="nav" data-visible="false">
     <li aria-expanded="false" aria-haspopup="true" class="dropdown">
-      <div class="dropdown-controls">
-        <a href="fall2023">Issue 1: Fall 2023</a>
-        <button class="dropdown-button">
-          <img class="dropdown-button-icon" src="/icons/chevron-down.svg" />
+      <div class="dropdown__controls">
+        <a href="fall2023">Issue 2: Winter 2023</a>
+        <button class="dropdown__button">
+          <img class="dropdown__button-icon" />
         </button>
       </div>
-
-      <ul class="dropdown-menu">
-        <Fall2023List />
-      </ul>
+      <ul class="dropdown-menu"></ul>
+    </li>
+    <li aria-expanded="false" aria-haspopup="true" class="dropdown">
+      <div class="dropdown__controls">
+        <a href="fall2023">Issue 1: Fall 2023</a>
+        <button class="dropdown__button">
+          <img class="dropdown__button-icon" />
+        </button>
+      </div>
+      <ul class="dropdown-menu"></ul>
     </li>
     <li><a href="/podette">Pod-ette</a></li>
     <li><a href="/about">About</a></li>
@@ -66,3 +73,12 @@ import NavToggler from "./NavToggler.astro";
   </ul>
 </nav>
 
+<style>
+  .nav-container {
+    display: flex;
+  }
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+</style>

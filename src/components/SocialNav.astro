@@ -1,0 +1,33 @@
+---
+const { facebookUrl, instagramUrl, twitterUrl } = Astro.props;
+---
+
+<ul class="social-links">
+  <li>
+    <a href={facebookUrl}
+      ><img
+        alt="Facebook logo."
+        class="social-icon"
+        src="../img/icons/facebook.svg"
+      />
+    </a>
+  </li>
+  <li>
+    <a href={instagramUrl}
+      ><img
+        alt="Instagram logo."
+        class="social-icon"
+        src="../img/icons/instagram.svg"
+      />
+    </a>
+  </li>
+  <li>
+    <a href={twitterUrl}
+      ><img
+        alt="Twitter logo."
+        class="social-icon"
+        src="../img/icons/twitter.svg"
+      />
+    </a>
+  </li>
+</ul>
