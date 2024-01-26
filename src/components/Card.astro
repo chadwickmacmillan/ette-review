@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+const { writer, issue } = Astro.props;
+
+const createHref = () => {
+  if (writer?.slug) {
+    return `/${issue}/${writer.slug}`;
+  } else return;
+};
+---
+
+<li>
+  <!-- <Image src={imageSrc} alt="" /> -->
+  {writer?.name && <a href={createHref()}>{writer.name}</a>}
+</li>
+<style></style>

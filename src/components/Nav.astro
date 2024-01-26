@@ -1,0 +1,68 @@
+---
+import Fall2023List from "./Fall2023List.astro";
+import NavToggler from "./NavToggler.astro";
+---
+
+<script>
+  //dropdown menu
+  let timer;
+  const dropdown = document.querySelector(".dropdown");
+  const dropdownButton = document.querySelector(".dropdown-button");
+  const notDropdownLink = document.querySelector(".dropdown :not(a)");
+
+  notDropdownLink.addEventListener("click", () => {
+    const ariaExpanded = dropdown.getAttribute("aria-expanded");
+    console.log(ariaExpanded);
+    if (ariaExpanded === "false") {
+      dropdown.setAttribute("aria-expanded", true);
+    } else if (ariaExpanded === "true") {
+      dropdown.setAttribute("aria-expanded", false);
+    }
+  });
+  dropdown.addEventListener("mouseenter", () => {
+    dropdown.setAttribute("aria-expanded", true);
+    clearTimeout(timer);
+  });
+
+  dropdown.addEventListener("mouseleave", () => {
+    timer = setTimeout(() => {
+      dropdown.setAttribute("aria-expanded", false);
+    }, 500);
+  });
+
+  //nav menu
+  const nav = document.querySelector(".nav");
+  const navToggler = document.querySelector(".nav-toggle");
+  navToggler.addEventListener("click", () => {
+    const navVisibility = nav.getAttribute("data-visible");
+    if (navVisibility === "false") {
+      nav.setAttribute("data-visible", true);
+      navToggler.setAttribute("aria-expanded", true);
+    } else {
+      nav.setAttribute("data-visible", false);
+      navToggler.setAttribute("aria-expanded", false);
+    }
+  });
+</script>
+<nav class="nav-container">
+  <NavToggler />
+  <ul class="nav" id="nav" data-visible="false">
+    <li aria-expanded="false" aria-haspopup="true" class="dropdown">
+      <div class="dropdown-controls">
+        <a href="fall2023">Issue 1: Fall 2023</a>
+        <button class="dropdown-button">
+          <img class="dropdown-button-icon" src="/icons/chevron-down.svg" />
+        </button>
+      </div>
+
+      <ul class="dropdown-menu">
+        <Fall2023List />
+      </ul>
+    </li>
+    <li><a href="/podette">Pod-ette</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/submit">Submit</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+

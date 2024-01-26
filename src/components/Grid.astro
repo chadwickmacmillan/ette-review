@@ -1,0 +1,19 @@
+---
+import Card from "./Card.astro";
+
+const { issue, writers } = Astro.props;
+---
+
+<ul class="grid">
+  {writers.map((writer) => <Card writer={writer} issue={issue} />)}
+</ul>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(min(100%, max(150px, 100%/3)), 1fr)
+    );
+  }
+</style>
