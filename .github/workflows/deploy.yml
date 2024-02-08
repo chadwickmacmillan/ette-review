@@ -36,3 +36,7 @@ jobs:
         with:
           name: app-build
           path: public_html
+      - uses: actions/download-artifact@v4
+        with:
+          name: my-artifact
+          path: public_html
