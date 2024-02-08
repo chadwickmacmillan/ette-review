@@ -1,4 +1,4 @@
-name: Build astro
+name: Upload Build Folder to GitHub Repo
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -8,7 +8,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -20,22 +19,25 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '14'
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 6
           run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global, gulp, prettier, typescript]
+            pnpm install -g gulp prettier typescript
+            pnpm install --frozen-lockfile --strict-peer-dependencies
+
       - name: Build 🔨
         run: pnpm build
-      - uses: actions/upload-artifact@v3
+
+      - name: Upload Build Folder
+        uses: actions/upload-artifact@v3
         with:
           name: app-build
-          path: public_html
-      
+          path: build
