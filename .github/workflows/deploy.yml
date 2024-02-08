@@ -8,7 +8,7 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,10 +32,6 @@ jobs:
             - args: [--global, gulp, prettier, typescript]
       - name: Build 🔨
         run: pnpm build
-      - uses: actions/upload-artifact@v3
-        with:
-          name: app-build
-          path: public_html
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
