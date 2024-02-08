@@ -1,0 +1,11 @@
+.container-primary {
+	display: grid;
+width: min(100% - 2.5rem, 80rem);
+margin-inline: auto;
+}
+@media (min-width: 992px) {
+.container-primary {
+grid-template-columns: 1fr auto;
+gap: 2rem;
+}
+}

@@ -12,7 +12,6 @@ import NavToggler from "./NavToggler.astro";
 
   notDropdownLink.addEventListener("click", () => {
     const ariaExpanded = dropdown.getAttribute("aria-expanded");
-    console.log(ariaExpanded);
     if (ariaExpanded === "false") {
       dropdown.setAttribute("aria-expanded", true);
     } else if (ariaExpanded === "true") {
@@ -55,21 +54,26 @@ import NavToggler from "./NavToggler.astro";
           <img class="dropdown__button-icon" />
         </button>
       </div>
-      <ul class="dropdown-menu"></ul>
+      <ul class="dropdown-menu">
+        <li></li>
+
+        <li>
+          <a href="/archive/fall2023">Archive</a>
+        </li>
+      </ul>
     </li>
-    <li aria-expanded="false" aria-haspopup="true" class="dropdown">
-      <div class="dropdown__controls">
-        <a href="/ette-review/fall2023">Issue 1: Fall 2023</a>
-        <button class="dropdown__button">
-          <img class="dropdown__button-icon" />
-        </button>
-      </div>
-      <ul class="dropdown-menu"></ul>
+    <li>
+      <a href="/podette">Pod-ette</a>
     </li>
-    <li><a href="/ette-review/podette">Pod-ette</a></li>
-    <li><a href="/ette-review/about">About</a></li>
-    <li><a href="/ette-review/submit">Submit</a></li>
-    <li><a href="/ette-review/contact">Contact</a></li>
+    <li>
+      <a href="/about"> About</a>
+    </li>
+    <li>
+      <a href="/submit"> Submit</a>
+    </li>
+    <li>
+      <a href="/contact"> Contact</a>
+    </li>
   </ul>
 </nav>
 

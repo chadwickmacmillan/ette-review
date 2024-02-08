@@ -2,19 +2,31 @@
 import SiteLayout from "src/layouts/SiteLayout.astro";
 import MainLayout from "src/layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
+import { Image } from "astro:assets";
+import etteEnvelope from "@assets/etteenvelope.webp";
 ---
 
 <SiteLayout>
-<MainLayout>
-  <section>
-    <p>
-      Please sign up for our mailing list by writing to <a
-        href="mailto:mailinglist@ettereview.com">mailinglist@ettereview.com</a
-      >. Just put "subscribe" in the header. Thanks! We'll only send you <span
-        class="italic">-ette</span
-      > updates and submission calls.
-    </p>
-    <SocialNav />
-  </section>
-</MainLayout>
+  <MainLayout>
+    <div class="container-primary">
+      <div class="text">
+        <section>
+          <p>
+            Please sign up for our mailing list by writing to <a
+              href="mailto:mailinglist@ettereview.com"
+              class="link">mailinglist@ettereview.com</a
+            >. Just put "subscribe" in the header. Thanks! We'll only send you <span
+              class="italic">-ette</span
+            > updates and submission calls.
+          </p>
+          <SocialNav />
+        </section>
+      </div>
+      <Image
+        src={etteEnvelope}
+        alt="Envelope with 'ette' written on the back"
+        width="400"
+      />
+    </div>
+  </MainLayout>
 </SiteLayout>

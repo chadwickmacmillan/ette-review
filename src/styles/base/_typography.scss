@@ -54,9 +54,6 @@ p + p {
 
 /* Utility classes, misc */
 
-.link:hover {
-  color: var(--clr-link-hover);
-}
 
 .bullet-list {
   list-style-type: disc;
@@ -69,6 +66,12 @@ p + p {
 
 .line-height-1 {
 line-height: 1;
+}
+.link {
+color: var(--clr-link);
+&:hover {
+	text-decoration: underline;
+}
 }
 /* For screenreaders only */
 .sr-only {
