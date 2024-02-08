@@ -36,10 +36,6 @@ jobs:
         with:
           name: app-build
           path: public_html
-      - uses: actions/download-artifact@v4
-        with:
-          name: app-build
-          path: public_html
   download:
     needs: build
     runs-on: ubuntu-latest
