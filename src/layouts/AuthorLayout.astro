@@ -1,0 +1,19 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import MainLayout from "@layouts/MainLayout.astro";
+import SocialNav from "@components/SocialNav.astro";
+import AuthorNavigator from "@components/AuthorNavigator.astro";
+const { authors, author } = Astro.props;
+---
+
+<SiteLayout title={author.name + " | -ette-review"} description="">
+  <MainLayout>
+    <slot />
+    <AuthorNavigator authors={authors} author={author}/>
+    <SocialNav
+      instagram={author.instagram}
+      twitter={author.twitter}
+      facebook={author.facebook}
+    />
+  </MainLayout>
+</SiteLayout>

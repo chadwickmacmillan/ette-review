@@ -1,0 +1,11 @@
+:root {
+	--clr-bg-winter2024: lightblue;
+	--clr-bg-fall2023: beige;
+	--clr-link: orange;
+	--clr-bg-primary: var(--clr-bg-winter2024);
+	--clr-gray: #63666a;
+}
+
+.bg-primary {
+	background-color: var(--clr-bg-primary);
+}

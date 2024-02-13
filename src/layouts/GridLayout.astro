@@ -1,23 +1,23 @@
 ---
+
 import Header from "@components/Header.astro";
 import Main from "@components/Main.astro";
 import Footer from "@components/Footer.astro";
 ---
-
 <div class="main-layout | bg-primary">
   <Header />
   <Main>
-    <slot />
+    <div class="grid-layout">
+      <slot />
+    </div>
   </Main>
   <Footer />
 </div>
 <style>
-  .main-layout {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+  :global(body) {
+    background-color: var(--bg-primary);
   }
-  :global(main) {
-    margin-block: 4rem;
+  .grid-layout {
+    margin-block: 2rem;
   }
 </style>

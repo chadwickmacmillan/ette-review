@@ -1,0 +1,33 @@
+---
+const { authors, currentAuthor } = Astro.props;
+const nextAuthor = authors.findIndex(currentAuthor.order % authors.length);
+const prevAuthor = authors.findIndex(
+  (currentAuthor.order - 2 + authors.length) % authors.length,
+);
+---
+
+<ul class="author-nav">
+  <li><a href={"/winter2024/" + prevAuthor?.slug}>{prevAuthor?.name}</a></li>
+  <li><a href={"/winter2024/" + nextAuthor?.slug}>{nextAuthor?.name}</a></li>
+</ul>
+
+<style lang="scss">
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    &::before,
+    &::after {
+      display: inline-block;
+      aspect-ratio: 1;
+      width: 1.5rem;
+    }
+  }
+  a:first-of-type::before {
+    content: "<";
+  }
+
+  a:last-of-type::after {
+    content: ">";
+  }
+</style>

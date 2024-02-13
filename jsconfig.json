@@ -4,7 +4,10 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@js/*": ["src/js/*"],
+      "@editions/*": ["src/editions/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.astro"]

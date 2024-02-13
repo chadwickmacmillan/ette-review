@@ -1,0 +1,9 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { winter2024 } from "src/editions/winter2024";
+import { getCurrentAuthor } from "src/utils/getCurrentAuthor";
+---
+
+<AuthorLayout authors={winter2024} author={getCurrentAuthor("agodon")}>
+
+</AuthorLayout>

@@ -1,12 +1,14 @@
 ---
-import SiteLayout from "src/layouts/SiteLayout.astro";
-import MainLayout from "src/layouts/MainLayout.astro";
+import SiteLayout from "@layouts/SiteLayout.astro";
+import GridLayout from "@layouts/GridLayout.astro";
 import Grid from "@components/Grid.astro";
-import { fall2023Writers } from "src/editions/fall2023";
+import { winter2024 } from "@editions/winter2024";
 ---
 
 <SiteLayout>
-  <MainLayout>
-    <Grid writers={fall2023Writers} issue="fall2023" />
-  </MainLayout>
+  <GridLayout>
+    <Grid writers={winter2024} issue="winter2024" />
+  </GridLayout>
 </SiteLayout>
+
+<style></style>

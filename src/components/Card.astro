@@ -9,8 +9,30 @@ const createHref = () => {
 };
 ---
 
-<li>
-  <!-- <Image src={imageSrc} alt="" /> -->
+<script>
+  const cards = document.querySelector(".card");
+  cards.forEach((card) => {
+    const link = card.querySelector("a");
+    card.addEventListener("click", () => {
+      link.preventDefault();
+      link.click();
+    });
+  });
+</script>
+
+<li class="card">
+  <Image src={writer.imageSrc} alt="" width="200" height="200" />
   {writer?.name && <a href={createHref()}>{writer.name}</a>}
 </li>
-<style></style>
+
+<style lang="scss">
+  .card {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    padding: 1rem;
+    :global(img) {
+      object-fit: contain;
+    }
+  }
+</style>

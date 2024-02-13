@@ -7,7 +7,12 @@ import Nav from "./Nav.astro";
 <header class="header">
   <h1 class="ette-logo">
     <a href="/winter2024">
-      <Image alt="Ette literary magizine logo." src={etteLogo} />
+      <Image
+        alt="Ette literary magizine logo."
+        src={etteLogo}
+        width="506"
+        height="150"
+      />
     </a>
   </h1>
   <Nav />
@@ -16,7 +21,12 @@ import Nav from "./Nav.astro";
 <style>
   .header {
     display: grid;
-    padding: 1rem;
     padding-bottom: 0;
+  }
+  h1 {
+    padding: 1rem;
+  }
+  a {
+max-width: min(100%, 405px);
   }
 </style>

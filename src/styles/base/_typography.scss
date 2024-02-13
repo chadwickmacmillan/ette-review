@@ -1,92 +1,85 @@
-  :root {
-    /* Colors */
-    --clr-link: orange;
-    --clr-link-hover: orange;
-    --clr-bg-primary: #000;
-
-    /* Type size */
---fs-root: clamp(1rem, 0.2vw + 0.9rem, 1.1rem);
---fs-100: clamp(1.2rem, 0.4vw + 1.1rem, 1.4rem);
---fs-200: clamp(1.4rem, 0.6vw + 1.3rem, 1.8rem);
---fs-300: clamp(1.7rem, 0.9vw + 1.5rem, 2.2rem);
---fs-400: clamp(2.1rem, 1.2vw + 1.8rem, 2.7rem);
---fs-500: clamp(2.5rem, 1.7vw + 2.1rem, 3.4rem);
---fs-600: clamp(3rem, 2.4vw + 2.4rem, 4.3rem);
---fs-700: clamp(3.6rem, 3.2vw + 2.8rem, 5.4rem);
---fs-800: clamp(4.3rem, 4.4vw + 3.2rem, 6.7rem);
---fs-900: clamp(5.2rem, 5.9vw + 3.7rem, 8.4rem);
-  }
+:root {
+	/* Type size */
+	--fs-root: clamp(1rem, 0.2vw + 0.9rem, 1.1rem);
+	--fs-100: clamp(1.2rem, 0.4vw + 1.1rem, 1.4rem);
+	--fs-200: clamp(1.4rem, 0.6vw + 1.3rem, 1.8rem);
+	--fs-300: clamp(1.7rem, 0.9vw + 1.5rem, 2.2rem);
+	--fs-400: clamp(2.1rem, 1.2vw + 1.8rem, 2.7rem);
+	--fs-500: clamp(2.5rem, 1.7vw + 2.1rem, 3.4rem);
+	--fs-600: clamp(3rem, 2.4vw + 2.4rem, 4.3rem);
+	--fs-700: clamp(3.6rem, 3.2vw + 2.8rem, 5.4rem);
+	--fs-800: clamp(4.3rem, 4.4vw + 3.2rem, 6.7rem);
+	--fs-900: clamp(5.2rem, 5.9vw + 3.7rem, 8.4rem);
+}
 
 /* Text indent*/
 .text-indent {
-  text-indent: 1em;
+	text-indent: 1em;
 }
 
 /* Center text */
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 /* Bold, italic stylings */
-.text-italic {
-  font-style: italic;
+.italic {
+	font-style: italic;
 }
 
-.text-bold {
-  font-weight: bold;
+.bold {
+	font-weight: bold;
 }
 
-strong,
-b {
-  font-weight: bold;
+:is(strong, b) {
+	font-weight: bold;
 }
 
-em,
-i,
-cite {
-  font-weight: italic;
+:is(em, i, cite) {
+	font-weight: italic;
 }
 
 /* Space between paragraphs */
-p + p {
-  margin-top: 1em;
+:is(p + p) {
+	margin-top: 1em;
 }
 
 /* Utility classes, misc */
 
-
 .bullet-list {
-  list-style-type: disc;
-  list-style-position: inside;
+	list-style-type: disc;
+	list-style-position: inside;
 }
 
 .bullet-list > li + li {
-  margin-top: 1em;
+	margin-top: 1em;
 }
 
 .line-height-1 {
-line-height: 1;
+	line-height: 1;
 }
+
 .link {
-color: var(--clr-link);
-&:hover {
-	text-decoration: underline;
+	color: var(--clr-link);
+	&:hover {
+		text-decoration: underline;
+	}
 }
-}
+
 /* For screenreaders only */
 .sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  /* 1 */
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  /* 2 */
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
-  /* 3 */
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	/* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	/* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+	/* 3 */
 }
