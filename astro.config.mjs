@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   outDir: './public_html'
-	site: 'https://ettereview.com/',
+	site: 'https://ettereview.com',
 });
