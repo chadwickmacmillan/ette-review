@@ -1,20 +1,19 @@
 ---
 import { Image } from "astro:assets";
-const { writer, issue } = Astro.props;
+const { writer, slug } = Astro.props;
 
 const createHref = () => {
   if (writer?.slug) {
-    return `/${issue}/${writer.slug}`;
+    return `/${slug}/${writer.slug}`;
   } else return;
 };
 ---
 
 <script>
-  const cards = document.querySelector(".card");
+  const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     const link = card.querySelector("a");
     card.addEventListener("click", () => {
-      link.preventDefault();
       link.click();
     });
   });
@@ -31,8 +30,32 @@ const createHref = () => {
     place-items: center;
     background-color: white;
     padding: 1rem;
-    :global(img) {
+    > :global(img) {
       object-fit: contain;
+    }
+    cursor: pointer;
+    > a {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: calc(100%);
+        width: 0;
+        height: 1px;
+        background-color: var(--clr-nav-hover);
+        transition: var(--nav-transition-in);
+      }
+    }
+  }
+  .card:hover {
+    a {
+      color: var(--clr-nav-hover);
+      &::after {
+        width: 100%;
+        transition: var(--nav-transition-out);
+      }
     }
   }
 </style>

@@ -6,7 +6,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 1,
 	},
 	{
 		name: "Amy Barnes",
@@ -15,7 +14,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 2,
 	},
 	{
 		name: "Genia Blum",
@@ -24,16 +22,14 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 3,
 	},
 	{
 		name: "Michael Czyzniejewski",
 		slug: "czyzniejewski",
-		imageSrc: "/images/winter2024/czyzniejewski_small.jpg",
+		imageSrc: "/images/winter2024/czyniejwski_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 4,
 	},
 	{
 		name: "Jeffrey Hecker",
@@ -42,7 +38,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 5,
 	},
 	{
 		name: "Jenn Hollmeyer",
@@ -51,7 +46,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 6,
 	},
 	{
 		name: "Marc Kaufman",
@@ -60,7 +54,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 7,
 	},
 	{
 		name: "Douglas A Martin",
@@ -69,7 +62,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 8,
 	},
 	{
 		name: "Lynn Mundell",
@@ -78,7 +70,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 9,
 	},
 	{
 		name: "Jessica Purdy",
@@ -87,7 +78,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 10,
 	},
 	{
 		name: "Francine Witte",
@@ -96,7 +86,6 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 11,
 	},
 	{
 		name: "Lucy Zhang",
@@ -105,6 +94,5 @@ export const winter2024 = [
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
-		order: 12,
 	},
 ];

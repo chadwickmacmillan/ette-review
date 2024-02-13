@@ -1,33 +1,86 @@
 ---
-const { authors, currentAuthor } = Astro.props;
-const nextAuthor = authors.findIndex(currentAuthor.order % authors.length);
-const prevAuthor = authors.findIndex(
-  (currentAuthor.order - 2 + authors.length) % authors.length,
-);
+const { authors, author } = Astro.props;
+const currentIndex = authors.findIndex((ath) => ath.slug === author.slug);
+const nextAuthor = authors[(currentIndex + 1) % authors.length];
+const prevAuthor =
+  authors[(currentIndex - 1 + authors.length) % authors.length];
 ---
 
-<ul class="author-nav">
+<ul class="author-nav | italic">
   <li><a href={"/winter2024/" + prevAuthor?.slug}>{prevAuthor?.name}</a></li>
   <li><a href={"/winter2024/" + nextAuthor?.slug}>{nextAuthor?.name}</a></li>
 </ul>
-
 <style lang="scss">
+  .author-nav {
+    display: flex;
+    gap: 2rem;
+    color: black;
+    margin-top: 1em;
+  }
   a {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    &::before,
-    &::after {
-      display: inline-block;
-      aspect-ratio: 1;
-      width: 1.5rem;
+    position: relative;
+    transition: var(--nav-transition-in);
+  }
+  li:first-of-type {
+    > a {
+      &::before {
+        content: "<";
+        display: inline-block;
+        aspect-ratio: 1;
+        width: 1.5rem;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--clr-nav-hover);
+        transition: var(--nav-transition-in);
+      }
+      &:hover {
+        color: var(--clr-nav-hover);
+        transition: var(--nav-transition-out);
+        &::after {
+          width: 100%;
+          color: var(--clr-nav-hover);
+          transition: var(--nav-transition-out);
+        }
+      }
     }
   }
-  a:first-of-type::before {
-    content: "<";
-  }
-
-  a:last-of-type::after {
-    content: ">";
+  li:last-of-type {
+    > a {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--clr-nav-hover);
+        transition: var(--nav-transition-in);
+      }
+      &:hover {
+        color: var(--clr-nav-hover);
+        transition: var(--nav-transition-out);
+        &::before {
+          transition: var(--nav-transition-out);
+          width: 100%;
+        }
+      }
+      &::after {
+        content: ">";
+        display: inline-block;
+        aspect-ratio: 1;
+        width: 1.5rem;
+      }
+    }
   }
 </style>

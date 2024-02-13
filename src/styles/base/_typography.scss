@@ -11,7 +11,39 @@
 	--fs-800: clamp(4.3rem, 4.4vw + 3.2rem, 6.7rem);
 	--fs-900: clamp(5.2rem, 5.9vw + 3.7rem, 8.4rem);
 }
-
+.fs-root {
+font-size: var(--fs-root);
+}
+.fs-100 {
+font-size: var(--fs-100);
+}
+.fs-200 {
+font-size: var(--fs-200);
+}
+.fs-300 {
+font-size: var(--fs-300);
+}
+.fs-400 {
+font-size: var(--fs-400);
+}
+.fs-500 {
+font-size: var(--fs-500);
+}
+.fs-600 {
+font-size: var(--fs-600);
+}
+.fs-700 {
+font-size: var(--fs-700);
+}
+.fs-800 {
+font-size: var(--fs-800);
+}
+.fs-900 {
+font-size: var(--fs-900);
+}
+.times {
+font-family: "Times", serif;
+}
 /* Text indent*/
 .text-indent {
 	text-indent: 1em;
@@ -57,29 +89,4 @@
 
 .line-height-1 {
 	line-height: 1;
-}
-
-.link {
-	color: var(--clr-link);
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-/* For screenreaders only */
-.sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
-	/* 1 */
-	-webkit-clip-path: inset(50%) !important;
-	clip-path: inset(50%) !important;
-	/* 2 */
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;
-	/* 3 */
 }

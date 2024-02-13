@@ -7,7 +7,8 @@
       "@layouts/*": ["src/layouts/*"],
       "@js/*": ["src/js/*"],
       "@editions/*": ["src/editions/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.astro"]

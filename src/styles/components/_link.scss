@@ -1,6 +1,6 @@
 .link {
-	color: orange;
+	color: var(--clr-gray);
 	&:hover {
-		text-decoration: underline;
+		color: orange;
 	}
 }

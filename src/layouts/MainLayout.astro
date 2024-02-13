@@ -4,10 +4,12 @@ import Main from "@components/Main.astro";
 import Footer from "@components/Footer.astro";
 ---
 
-<div class="main-layout | bg-primary">
+<div class="main-layout | bg-primary fs-200">
   <Header />
   <Main>
-    <slot />
+    <div class="container-primary">
+      <slot />
+    </div>
   </Main>
   <Footer />
 </div>
@@ -16,6 +18,8 @@ import Footer from "@components/Footer.astro";
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    line-height: 1.5;
+    color: var(--clr-gray);
   }
   :global(main) {
     margin-block: 4rem;

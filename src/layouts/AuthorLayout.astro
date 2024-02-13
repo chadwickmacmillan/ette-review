@@ -4,16 +4,28 @@ import MainLayout from "@layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import AuthorNavigator from "@components/AuthorNavigator.astro";
 const { authors, author } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
-<SiteLayout title={author.name + " | -ette-review"} description="">
+<SiteLayout title={author?.name + " | -ette-review"} description="">
   <MainLayout>
-    <slot />
-    <AuthorNavigator authors={authors} author={author}/>
-    <SocialNav
-      instagram={author.instagram}
-      twitter={author.twitter}
-      facebook={author.facebook}
-    />
+    <div class="text">
+      <Image src={author?.imageSrc} alt="" height="400" width="400" />
+      <slot />
+      <AuthorNavigator authors={authors} author={author} />
+      <SocialNav
+        instagramUrl={author?.instagram}
+        twitterUrl={author?.twitter}
+        facebookUrl={author?.facebook}
+      />
+    </div>
+    <div class="empty"></div>
   </MainLayout>
 </SiteLayout>
+
+<style>
+  .text :global(img) {
+    object-fit: contain;
+    float: left;
+  }
+</style>

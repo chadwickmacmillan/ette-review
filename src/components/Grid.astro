@@ -1,11 +1,11 @@
 ---
 import Card from "./Card.astro";
 
-const { issue, writers } = Astro.props;
+const { slug, writers } = Astro.props;
 ---
 
 <ul class="grid">
-  {writers.map((writer) => <Card writer={writer} issue={issue} />)}
+  {writers.map((writer) => <Card writer={writer} slug={slug} />)}
 </ul>
 
 <style>
@@ -25,7 +25,7 @@ const { issue, writers } = Astro.props;
     }
   }
 
-  @media (min-width: 814px) {
+  @media (min-width: 1046px) {
     .grid {
       margin-left: 16rem;
       grid-template-columns: repeat(3, var(--_card-size));

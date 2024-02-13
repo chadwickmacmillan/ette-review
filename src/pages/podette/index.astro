@@ -1,11 +1,14 @@
 ---
 import SiteLayout from "src/layouts/SiteLayout.astro";
 import MainLayout from "src/layouts/MainLayout.astro";
+import podette from "@assets/podette.webp";
+import SocialNav from "@components/SocialNav.astro";
+import { Image } from "astro:assets";
 ---
 
 <SiteLayout>
   <MainLayout>
-    <div class="main-content contact">
+    <div class="text">
       <section>
         <h1><strong>pod-ette</strong></h1>
 
@@ -27,42 +30,21 @@ import MainLayout from "src/layouts/MainLayout.astro";
 
         <p>
           Listen to <span class="italic">pod-ette</span> here: <a
+            class="link"
             href="https://podcasters.spotify.com/pod/show/mhoopes-us/episodes/pod-ette-e29e24p"
-            >Episode 1: "If I Could Remake the World"</a>
+            >Episode 1: "If I Could Remake the World"</a
+          >
         </p>
 
         <p>Thanks for listening!</p>
       </section>
 
-      <ul class="social-links">
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=100092343586387"
-            ><img
-              alt="Facebook logo."
-              class="social-icon"
-              src="../img/icons/facebook.svg"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/ettereview/"
-            ><img
-              alt="Instagram logo."
-              class="social-icon"
-              src="../img/icons/instagram.svg"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/EtteReview"
-            ><img
-              alt="Twitter logo."
-              class="social-icon"
-              src="../img/icons/twitter.svg"
-            />
-          </a>
-        </li>
-      </ul>
+      <SocialNav
+        facebookUrl={"https://www.facebook.com/profile.php?id=100092343586387"}
+        twitterUrl={"https://www.instagram.com/ettereview/"}
+        instagramUrl={"https://twitter.com/EtteReview"}
+      />
     </div>
+    <Image src={podette} alt="Watercolor of radio" width="400" height="410.5" />
   </MainLayout>
 </SiteLayout>

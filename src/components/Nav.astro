@@ -4,7 +4,6 @@ import { winter2024 } from "@editions/winter2024";
 ---
 
 <script>
-  //dropdown menu
   let timer;
   const dropdown = document.querySelector(".dropdown");
   const dropdownButton = document.querySelector(".dropdown-button");
@@ -30,12 +29,12 @@ import { winter2024 } from "@editions/winter2024";
   });
 </script>
 
-<nav class="nav-container">
+<nav class="nav-container | fs-root">
   <NavToggler />
   <ul class="nav" id="nav" data-visible="false">
     <li aria-expanded="false" aria-haspopup="true" class="dropdown">
       <div class="dropdown__controls">
-        <a href="/ette-review/winter2024">Issue 2: Winter 2024</a>
+        <a href="/winter2024">Issue 2: Winter 2024</a>
         <button class="dropdown__button"
           ><span class="sr-only">Menu</span>
         </button>
@@ -56,29 +55,39 @@ import { winter2024 } from "@editions/winter2024";
 </div>
     </li>
     <li>
-      <a href="/podette">Pod-ette</a>
+      <a class="nav-link" href="/podette">Pod-ette</a>
     </li>
     <li>
-      <a href="/about"> About</a>
+      <a class="nav-link" href="/about"> About</a>
     </li>
     <li>
-      <a href="/submit"> Submit</a>
+      <a class="nav-link" href="/submit"> Submit</a>
     </li>
     <li>
-      <a href="/contact"> Contact</a>
+      <a class="nav-link" href="/contact"> Contact</a>
     </li>
   </ul>
 </nav>
 
 <style lang="scss">
   .nav-container {
-    --_padding-block: 1rem;
-    --_transition-in: 200ms all ease-in;
-    --_transition-out: 150ms all ease-in;
+    --_padding-inline: 1.25rem;
+    --_padding-block: .625rem;
+    --nav-transition-in: 200ms all ease-in;
+    --nav-transition-out: 150ms all ease-in;
     display: flex;
     background-color: white;
     text-transform: uppercase;
     position: relative;
+    padding-inline: 1rem;
+    line-height: 1;
+    color: black;
+    z-index: 100;
+  }
+  @media (min-width: 768px) {
+.nav-container {
+padding-inline: 0;
+}
   }
   .nav {
     display: none;
@@ -92,27 +101,41 @@ import { winter2024 } from "@editions/winter2024";
       display: flex;
     }
   }
+  @media (min-width: 768px) {
+  .nav {
+  display: flex;
+  flex-direction: row;
+position: static;
+inset: auto;
+  }
+  }
   .dropdown {
     position: relative;
     &[aria-expanded="true"] {
       > .dropdown__menu-wrapper {
       grid-template-rows: 1fr;
-transition: var(--_transition-out);
+transition: var(--nav-transition-out);
       }
       .dropdown__button {
         rotate: -180deg;
-	transition: var(--_transition-in);
+	transition: var(--nav-transition-in);
       }
     }
   }
+
   .dropdown__controls {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
+    position: relative;
     width: 100%;
+    gap: .75rem;
     > a {
       padding-right: 0;
     }
+  }
+  .nav-link {
+position: relative;
   }
   .dropdown__button {
     display: block;
@@ -121,24 +144,52 @@ transition: var(--_transition-out);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-right: var(--_padding-block);
-    transition: var(--_transition-out);
-  }
-  .dropdown__menu {
-    overflow: hidden;
-    transition: var(--_transition-out);
-    > li + li {
-      border-bottom: 1px solid rgb(235 235 235);
-    }
+    margin-right: var(--_padding-inline);
+    transition: var(--nav-transition-out);
   }
   .dropdown__menu-wrapper {
 display: grid;
 grid-template-rows: 0fr;
-transition: var(--_transition-in);
+transition: var(--nav-transition-in);
   }
+  @media (min-width: 768px) {
+.dropdown__menu-wrapper {
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+}
+  }
+  .dropdown__menu {
+    overflow: hidden;
+    transition: var(--nav-transition-out);
+    background-color: white;
+    > li + li {
+      border-bottom: 1px solid rgb(235 235 235);
+    }
+  }
+
   a {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: var(--_padding-block) var(--_padding-inline);
     text-align: center;
+  }
+  .dropdown__controls::after, .nav-link::after {
+content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-nav-hover);
+    transition: var(--nav-transition-in);
+  }
+  .dropdown__controls, .nav-link {
+overflow: visible;
+  }
+  .dropdown:hover > .dropdown__controls::after, .nav-link:hover::after {
+width: 100%;
+    transition: var(--nav-transition-out);
   }
 </style>
