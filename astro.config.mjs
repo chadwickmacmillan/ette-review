@@ -4,4 +4,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   outDir: './public_html'
+	site: 'https://ettereview.com',
+  base: '/admin/new_winter2024',
 });
