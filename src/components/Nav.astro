@@ -47,7 +47,7 @@ import { winter2024 } from "@editions/winter2024";
             winter2024.map((author) => (
               <li>
                 <a
-                  href={import.meta.env.BASE_URL + `/winter2024/${author.slug}`}
+                  href={import.meta.env.BASE_URL + `winter2024/${author.slug}/`}
                 >
                   {author.name}
                 </a>
@@ -55,26 +55,26 @@ import { winter2024 } from "@editions/winter2024";
             ))
           }
           <li>
-            <a href={import.meta.env.BASE_URL + "/archive/fall2023"}>Archive</a>
+            <a href={import.meta.env.BASE_URL + "archive/fall2023/"}>Archive</a>
           </li>
         </ul>
       </div>
     </li>
     <li>
-      <a class="nav-link" href={import.meta.env.BASE_URL + "/podette"}
+      <a class="nav-link" href={import.meta.env.BASE_URL + "podette/"}
         >Pod-ette</a
       >
     </li>
     <li>
-      <a class="nav-link" href={import.meta.env.BASE_URL + "/about"}> About</a>
+      <a class="nav-link" href={import.meta.env.BASE_URL + "about/"}> About</a>
     </li>
     <li>
-      <a class="nav-link" href={import.meta.env.BASE_URL + "/submit"}>
+      <a class="nav-link" href={import.meta.env.BASE_URL + "submit/"}>
         Submit</a
       >
     </li>
     <li>
-      <a class="nav-link" href={import.meta.env.BASE_URL + "/contact"}>
+      <a class="nav-link" href={import.meta.env.BASE_URL + "contact/"}>
         Contact</a
       >
     </li>

@@ -11,7 +11,10 @@ import localEtteLogo from "@assets/ettelogo.webp";
       <h1 class="heading">
         <Image src={localEtteLogo} alt="Ette literary magizine logo." />
       </h1>
-      <a href={import.meta.env.BASE_URL + "/winter2024"} class="subheading | line-height-1">Winter 2024</a>
+      <a
+        href={import.meta.env.BASE_URL + "winter2024/"}
+        class="subheading | line-height-1">Winter 2024</a
+      >
     </header>
     <main class="splash-container">
       <section class="ette-definition">
@@ -57,7 +60,7 @@ import localEtteLogo from "@assets/ettelogo.webp";
     margin-left: min(76px, 17vw);
     margin-top: 1.25rem;
     font-size: var(--fs-600);
-    color: var(--clr-link);
+    color: var(--clr-orange);
     &:hover {
       color: var(--clr-gray);
     }

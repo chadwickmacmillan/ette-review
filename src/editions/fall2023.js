@@ -2,7 +2,7 @@ export const fall2023 = [
 	{
 		name: "Andrew Bertaina",
 		slug: "bertaina",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/whales.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/whales.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -10,7 +10,7 @@ export const fall2023 = [
 	{
 		name: "Patricia Q. Bidar",
 		slug: "bidar",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/doors.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/doors.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -18,7 +18,7 @@ export const fall2023 = [
 	{
 		name: "Avitus B. Carle",
 		slug: "carle",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/airplane.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/airplane.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -26,7 +26,7 @@ export const fall2023 = [
 	{
 		name: "Kathy Fish",
 		slug: "fish",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/cone.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/cone.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -34,7 +34,7 @@ export const fall2023 = [
 	{
 		name: "Eliot Li",
 		slug: "li",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/apron.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/apron.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -42,7 +42,7 @@ export const fall2023 = [
 	{
 		name: "Jennifer Martelli",
 		slug: "martelli",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/jung.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/jung.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -50,7 +50,7 @@ export const fall2023 = [
 	{
 		name: "Douglas A. Martin",
 		slug: "martin",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/fawn.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/fawn.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -58,7 +58,7 @@ export const fall2023 = [
 	{
 		name: "Cheryl Pappas",
 		slug: "pappas",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/reddress.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/reddress.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -66,7 +66,7 @@ export const fall2023 = [
 	{
 		name: "M.A. Scott",
 		slug: "scott",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/petticoat.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/petticoat.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -74,7 +74,7 @@ export const fall2023 = [
 	{
 		name: "Eileen Tomarchio",
 		slug: "tomarchio",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/octopus.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/octopus.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -82,7 +82,7 @@ export const fall2023 = [
 	{
 		name: false,
 		slug: false,
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/lambette.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/lambette.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
@@ -91,7 +91,7 @@ export const fall2023 = [
 		name: "pod-ette",
 		slug: "podette",
 		link: "podette",
-		imageSrc: import.meta.env.BASE_URL + "/images/fall2023/podette.webp",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2023/podette.webp",
 		instagram: "https://instagram.com",
 		facebook: "https://facebook.com",
 		twitter: "https://twitter.com/",
