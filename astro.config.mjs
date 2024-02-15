@@ -5,6 +5,6 @@ export default defineConfig({
 	output: "static",
 	outDir: "./public_html",
 	site: "https://ettereview.com",
-	base: "/admin/winter2024/",
+	base: "/admin/winter2024",
 	trailingSlash: "always",
 });
