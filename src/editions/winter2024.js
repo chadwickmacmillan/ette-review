@@ -2,7 +2,7 @@ export const winter2024 = [
 	{
 		name: "Kelli Russell Agodon",
 		slug: "agodon",
-		imageSrc: "/images/winter2024/agodon_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/agodon_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -10,7 +10,7 @@ export const winter2024 = [
 	{
 		name: "Amy Barnes",
 		slug: "barnes",
-		imageSrc: "/images/winter2024/barnes_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/barnes_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -18,7 +18,7 @@ export const winter2024 = [
 	{
 		name: "Genia Blum",
 		slug: "blum",
-		imageSrc: "/images/winter2024/blum_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/blum_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -26,7 +26,7 @@ export const winter2024 = [
 	{
 		name: "Michael Czyzniejewski",
 		slug: "czyzniejewski",
-		imageSrc: "/images/winter2024/czyniejwski_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/czyniejwski_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -34,7 +34,7 @@ export const winter2024 = [
 	{
 		name: "Jeffrey Hecker",
 		slug: "hecker",
-		imageSrc: "/images/winter2024/hecker_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/hecker_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -42,7 +42,7 @@ export const winter2024 = [
 	{
 		name: "Jenn Hollmeyer",
 		slug: "hollmeyer",
-		imageSrc: "/images/winter2024/hollmeyer_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/hollmeyer_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -50,7 +50,7 @@ export const winter2024 = [
 	{
 		name: "Marc Kaufman",
 		slug: "kaufman",
-		imageSrc: "/images/winter2024/kaufman_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/kaufman_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -58,7 +58,7 @@ export const winter2024 = [
 	{
 		name: "Douglas A Martin",
 		slug: "martin",
-		imageSrc: "/images/winter2024/martin_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/martin_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -66,7 +66,7 @@ export const winter2024 = [
 	{
 		name: "Lynn Mundell",
 		slug: "mundell",
-		imageSrc: "/images/winter2024/mundell_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/mundell_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -74,7 +74,7 @@ export const winter2024 = [
 	{
 		name: "Jessica Purdy",
 		slug: "purdy",
-		imageSrc: "/images/winter2024/purdy_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/purdy_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -82,7 +82,7 @@ export const winter2024 = [
 	{
 		name: "Francine Witte",
 		slug: "witte",
-		imageSrc: "/images/winter2024/witte_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/witte_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
@@ -90,7 +90,7 @@ export const winter2024 = [
 	{
 		name: "Lucy Zhang",
 		slug: "zhang",
-		imageSrc: "/images/winter2024/zhang_small.jpg",
+		imageSrc: import.meta.env.BASE_URL + "/images/winter2024/zhang_small.jpg",
 		instagram: "https://instagram.com/",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",

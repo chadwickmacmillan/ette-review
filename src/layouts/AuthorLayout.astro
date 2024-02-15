@@ -3,7 +3,7 @@ import SiteLayout from "@layouts/SiteLayout.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import AuthorNavigator from "@components/AuthorNavigator.astro";
-const { authors, author } = Astro.props;
+const { authors, author, slug } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
     <div class="text">
       <Image src={author?.imageSrc} alt="" height="400" width="400" />
       <slot />
-      <AuthorNavigator authors={authors} author={author} />
+      <AuthorNavigator authors={authors} author={author} slug={slug} />
       <SocialNav
         instagramUrl={author?.instagram}
         twitterUrl={author?.twitter}
@@ -28,5 +28,8 @@ import { Image } from "astro:assets";
     object-fit: contain;
     float: left;
     margin-right: 2rem;
+  }
+  .text :global(h2 + *) {
+    margin-top: 1em;
   }
 </style>

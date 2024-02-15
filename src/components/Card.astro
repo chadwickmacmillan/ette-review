@@ -4,7 +4,11 @@ const { writer, slug } = Astro.props;
 
 const createHref = () => {
   if (writer?.slug) {
-    return `/${slug}/${writer.slug}`;
+    if (writer.slug === "podette") {
+      return "/podette";
+    } else {
+      return `/${slug}/${writer.slug}`;
+    }
   } else return;
 };
 ---
@@ -20,8 +24,23 @@ const createHref = () => {
 </script>
 
 <li class="card">
-  <Image src={writer.imageSrc} alt="" width="200" height="200" />
-  {writer?.name && <a href={createHref()}>{writer.name}</a>}
+  {
+    writer?.name && writer?.slug && (
+      <Image src={writer.imageSrc} alt="" width="200" height="200" />
+    )
+  }
+  {
+    !writer?.name && (
+      <a href={import.meta.env.BASE_URL + "/winter2024"}>
+        <Image src={writer.imageSrc} alt="" width="200" height="200" />
+      </a>
+    )
+  }
+  {
+    writer?.name && (
+      <a href={import.meta.env.BASE_URL + createHref()}>{writer.name}</a>
+    )
+  }
 </li>
 
 <style lang="scss">
@@ -36,6 +55,7 @@ const createHref = () => {
     cursor: pointer;
     > a {
       position: relative;
+      margin-top: 0.5rem;
       &::after {
         content: "";
         display: block;
@@ -48,14 +68,17 @@ const createHref = () => {
         transition: var(--nav-transition-in);
       }
     }
-  }
-  .card:hover {
-    a {
-      color: var(--clr-nav-hover);
-      &::after {
-        width: 100%;
-        transition: var(--nav-transition-out);
+    &:hover {
+      a {
+        color: var(--clr-nav-hover);
+        &::after {
+          width: 100%;
+          transition: var(--nav-transition-out);
+        }
       }
     }
+  }
+  .card.card :global(a:has(img)::after) {
+    display: none;
   }
 </style>

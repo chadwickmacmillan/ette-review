@@ -7,7 +7,7 @@ import noraPortrait from "@assets/nora_ette_portrait.webp";
 import Image from "astro/components/Image.astro";
 ---
 
-<SiteLayout>
+<SiteLayout title="About | -ette review">
   <MainLayout>
     <div class="text">
       <section>
@@ -193,5 +193,11 @@ import Image from "astro/components/Image.astro";
   }
   section + section {
     margin-top: 4rem;
+  }
+  .link {
+    color: var(--clr-gray);
+    &:hover {
+color: var(--clr-orange);
+    }
   }
 </style>

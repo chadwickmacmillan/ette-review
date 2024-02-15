@@ -1,5 +1,5 @@
 ---
-const { authors, author } = Astro.props;
+const { authors, author, slug } = Astro.props;
 const currentIndex = authors.findIndex((ath) => ath.slug === author.slug);
 const nextAuthor = authors[(currentIndex + 1) % authors.length];
 const prevAuthor =
@@ -7,8 +7,24 @@ const prevAuthor =
 ---
 
 <ul class="author-nav | italic">
-  <li><a href={"/winter2024/" + prevAuthor?.slug}>{prevAuthor?.name}</a></li>
-  <li><a href={"/winter2024/" + nextAuthor?.slug}>{nextAuthor?.name}</a></li>
+  {
+    prevAuthor.slug !== "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `/${slug}/` + prevAuthor?.slug}>
+          {prevAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+  {
+    prevAuthor.slug !== "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `/${slug}/` + nextAuthor?.slug}>
+          {nextAuthor?.name}
+        </a>
+      </li>
+    )
+  }
 </ul>
 <style lang="scss">
   .author-nav {

@@ -6,7 +6,7 @@ import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
 ---
 
-<SiteLayout>
+<SiteLayout title="podette | -ette review">
   <MainLayout>
     <div class="text">
       <section>
@@ -30,7 +30,6 @@ import { Image } from "astro:assets";
 
         <p>
           Listen to <span class="italic">pod-ette</span> here: <a
-            class="link"
             href="https://podcasters.spotify.com/pod/show/mhoopes-us/episodes/pod-ette-e29e24p"
             >Episode 1: "If I Could Remake the World"</a
           >
@@ -38,13 +37,13 @@ import { Image } from "astro:assets";
 
         <p>Thanks for listening!</p>
       </section>
-
-      <SocialNav
-        facebookUrl={"https://www.facebook.com/profile.php?id=100092343586387"}
-        twitterUrl={"https://www.instagram.com/ettereview/"}
-        instagramUrl={"https://twitter.com/EtteReview"}
-      />
     </div>
     <Image src={podette} alt="Watercolor of radio" width="400" height="410.5" />
   </MainLayout>
 </SiteLayout>
+
+<style>
+  a {
+    color: var(--clr-link-hover);
+  }
+</style>

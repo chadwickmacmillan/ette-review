@@ -14,7 +14,7 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="times">
+  <body class="body | bg-primary times">
     <slot />
   </body>
 </html>
@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
   html {
     font-family: system-ui, sans-serif;
   }
-  body {
+  .body {
     min-height: 100vh;
   }
   :global(p + p) {
