@@ -2,10 +2,13 @@
 import AuthorLayout from "@layouts/AuthorLayout.astro";
 import { winter2024 } from "@editions/winter2024";
 import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Barnes from "./barnes.html";
 ---
 
 <AuthorLayout
   authors={winter2024}
   author={getCurrentAuthor(winter2024, "barnes")}
   slug="winter2024"
-/>
+>
+  <Barnes />
+</AuthorLayout>
