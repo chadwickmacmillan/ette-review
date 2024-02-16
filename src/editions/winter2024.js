@@ -3,7 +3,7 @@ export const winter2024 = [
 		name: "Kelli Russell Agodon",
 		slug: "agodon",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/agodon_small.jpg",
-		instagram: "https://instagram.com/",
+		instagram: "https://instagram.com/instagram",
 		facebook: "https://facebook.com/",
 		twitter: "https://twitter.com/",
 	},
