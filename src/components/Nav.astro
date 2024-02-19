@@ -1,42 +1,46 @@
 ---
 import NavToggler from "./NavToggler.astro";
-import { winter2024 } from "@editions/winter2024";
+const { issueTitle, issue, authors } = Astro.props;
 ---
 
 <script>
-  let timer;
-  const dropdown = document.querySelector(".dropdown");
-  const dropdownButton = document.querySelector(".dropdown-button");
-  const notDropdownLink = document.querySelector(".dropdown :not(a)");
+  const dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach((dropdown) => {
+    let timer;
+    const dropdownButton = dropdown.querySelector(".dropdown__button");
+    const notDropdownLink = dropdown.querySelector(":not(a)");
 
-  notDropdownLink.addEventListener("click", () => {
-    const ariaExpanded = dropdown.getAttribute("aria-expanded");
-    if (ariaExpanded === "false") {
+    notDropdownLink.addEventListener("click", () => {
+      const ariaExpanded = dropdown.getAttribute("aria-expanded");
+      if (ariaExpanded === "false") {
+        dropdown.setAttribute("aria-expanded", true);
+      } else if (ariaExpanded === "true") {
+        dropdown.setAttribute("aria-expanded", false);
+      }
+    });
+    dropdown.addEventListener("mouseenter", () => {
       dropdown.setAttribute("aria-expanded", true);
-    } else if (ariaExpanded === "true") {
-      dropdown.setAttribute("aria-expanded", false);
-    }
-  });
-  dropdown.addEventListener("mouseenter", () => {
-    dropdown.setAttribute("aria-expanded", true);
-    clearTimeout(timer);
-  });
+      clearTimeout(timer);
+    });
 
-  dropdown.addEventListener("mouseleave", () => {
-    timer = setTimeout(() => {
-      dropdown.setAttribute("aria-expanded", false);
-    }, 500);
+    dropdown.addEventListener("mouseleave", () => {
+      timer = setTimeout(() => {
+        dropdown.setAttribute("aria-expanded", false);
+      }, 500);
+    });
   });
 </script>
 
 <nav class="nav-container | fs-root">
   <NavToggler />
   <ul class="nav" id="nav" data-visible="false">
-    <li aria-expanded="false" aria-haspopup="true" class="dropdown">
+    <li
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="current-issue-dropdown | dropdown"
+    >
       <div class="dropdown__controls">
-        <a href={import.meta.env.BASE_URL + "/winter2024"}
-          >Issue 2: Winter 2024</a
-        >
+        <a href={import.meta.env.BASE_URL + issue + "/"}>{issueTitle}</a>
         <button class="dropdown__button"
           ><span class="sr-only">Menu</span>
         </button>
@@ -44,18 +48,34 @@ import { winter2024 } from "@editions/winter2024";
       <div class="dropdown__menu-wrapper">
         <ul class="dropdown__menu">
           {
-            winter2024.map((author) => (
+            authors.map((author) => (
               <li>
-                <a
-                  href={import.meta.env.BASE_URL + `winter2024/${author.slug}/`}
-                >
+                <a href={import.meta.env.BASE_URL + `${issue}/${author.slug}/`}>
                   {author.name}
                 </a>
               </li>
             ))
           }
+        </ul>
+      </div>
+    </li>
+    <li
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="archive-dropdown | dropdown"
+    >
+      <div class="dropdown__controls">
+        <span>Archive</span>
+        <button class="dropdown__button"
+          ><span class="sr-only">Menu</span>
+        </button>
+      </div>
+      <div class="dropdown__menu-wrapper">
+        <ul class="dropdown__menu">
           <li>
-            <a href={import.meta.env.BASE_URL + "archive/fall2023/"}>Archive</a>
+            <a href={import.meta.env.BASE_URL + "archive/fall2023/"}
+              >Issue I: Fall 2023</a
+            >
           </li>
         </ul>
       </div>
@@ -96,7 +116,7 @@ import { winter2024 } from "@editions/winter2024";
     color: black;
     z-index: 100;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .nav-container {
       padding-inline: 0;
     }
@@ -113,7 +133,7 @@ import { winter2024 } from "@editions/winter2024";
       display: flex;
     }
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .nav {
       display: flex;
       flex-direction: row;
@@ -137,13 +157,23 @@ import { winter2024 } from "@editions/winter2024";
 
   .dropdown__controls {
     display: grid;
-    grid-template-columns: 1fr auto;
     align-items: center;
     position: relative;
     width: 100%;
-    gap: 0.75rem;
-    > a {
-      padding-right: 0;
+    > span {
+      display: block;
+      padding: var(--_padding-block) var(--_padding-inline);
+      text-align: center;
+    }
+  }
+  @media (min-width: 992px) {
+    .dropdown__controls {
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+
+      > :is(span, a) {
+        padding-right: 0;
+      }
     }
   }
   .nav-link {
@@ -152,20 +182,30 @@ import { winter2024 } from "@editions/winter2024";
   .dropdown__button {
     display: block;
     aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--_padding-inline);
     width: 1rem;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='black' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-right: var(--_padding-inline);
     transition: var(--nav-transition-out);
     cursor: pointer;
+  }
+  @media (min-width: 992px) {
+    .dropdown__button {
+      position: static;
+      transform: translateY(0);
+      margin-right: var(--_padding-inline);
+    }
   }
   .dropdown__menu-wrapper {
     display: grid;
     grid-template-rows: 0fr;
     transition: var(--nav-transition-in);
   }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .dropdown__menu-wrapper {
       position: absolute;
       top: 100%;
@@ -177,7 +217,7 @@ import { winter2024 } from "@editions/winter2024";
     overflow: hidden;
     transition: var(--nav-transition-out);
     background-color: white;
-    > li {
+    &:has(li:nth-child(2)) > li {
       border-bottom: 1px solid rgb(235 235 235);
     }
   }
@@ -187,25 +227,27 @@ import { winter2024 } from "@editions/winter2024";
     padding: var(--_padding-block) var(--_padding-inline);
     text-align: center;
   }
-  .dropdown__controls::after,
-  .nav-link::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--clr-nav-hover);
-    transition: var(--nav-transition-in);
-  }
-  .dropdown__controls,
-  .nav-link {
-    overflow: visible;
-  }
-  .dropdown[aria-expanded="true"] > .dropdown__controls::after,
-  .nav-link:hover::after {
-    width: 100%;
-    transition: var(--nav-transition-out);
+  @media (min-width: 992px) {
+    .dropdown__controls::after,
+    .nav-link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--clr-nav-hover);
+      transition: var(--nav-transition-in);
+    }
+    .dropdown__controls,
+    .nav-link {
+      overflow: visible;
+    }
+    .dropdown[aria-expanded="true"] > .dropdown__controls::after,
+    .nav-link:hover::after {
+      width: 100%;
+      transition: var(--nav-transition-out);
+    }
   }
 </style>

@@ -5,10 +5,11 @@ import bethPortrait from "@assets/beth_ette_portrait.webp";
 import melaniePortrait from "@assets/melanie_ette_portrait.webp";
 import noraPortrait from "@assets/nora_ette_portrait.webp";
 import Image from "astro/components/Image.astro";
+import { winter2024 } from "@editions/winter2024";
 ---
 
 <SiteLayout title="About | -ette review">
-  <MainLayout>
+  <MainLayout issueTitle={"Issue II: Winter 2024"} issue={"winter2024"} authors={winter2024}>
     <div class="text">
       <section>
         <p>
@@ -197,7 +198,7 @@ import Image from "astro/components/Image.astro";
   .link {
     color: var(--clr-gray);
     &:hover {
-color: var(--clr-orange);
+      color: var(--clr-orange);
     }
   }
 </style>

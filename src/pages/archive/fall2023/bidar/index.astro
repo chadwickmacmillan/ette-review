@@ -2,13 +2,15 @@
 import AuthorLayout from "@layouts/AuthorLayout.astro";
 import { fall2023 } from "@editions/fall2023";
 import { getCurrentAuthor } from "@utils/getCurrentAuthor";
-import Bidar from "./bidar.astro";
+import Bidar from "./bidar.html";
 ---
 
 <AuthorLayout
   authors={fall2023}
   author={getCurrentAuthor(fall2023, "bidar")}
   slug="archive/fall2023"
+  issueTitle={"Issue I: Fall 2023"}
+  issue={"archive/fall2023"}
 >
   <Bidar />
 </AuthorLayout>

@@ -3,23 +3,23 @@ import SiteLayout from "@layouts/SiteLayout.astro";
 import MainLayout from "@layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import AuthorNavigator from "@components/AuthorNavigator.astro";
-const { authors, author, slug } = Astro.props;
+const { authors, author, slug, issueTitle, issue } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
 <SiteLayout title={author?.name + " | -ette-review"} description="">
-  <MainLayout>
-    <div class="text">
-      <Image src={author?.imageSrc} alt="" height="400" width="400" />
-      <slot />
-      <AuthorNavigator authors={authors} author={author} slug={slug} />
-      <SocialNav
-        instagramUrl={author?.instagram}
-        twitterUrl={author?.twitter}
-        facebookUrl={author?.facebook}
-      />
-    </div>
-    <div class="empty"></div>
+  <MainLayout issueTitle={issueTitle} issue={issue} authors={authors} >
+  <div class="text">
+    <Image src={author?.imageSrc} alt="" height="400" width="400" />
+    <slot />
+    <AuthorNavigator authors={authors} author={author} slug={slug} />
+    <SocialNav
+      instagramUrl={author?.instagram}
+      twitterUrl={author?.twitter}
+      facebookUrl={author?.facebook}
+    />
+  </div>
+  <div class="empty"></div>
   </MainLayout>
 </SiteLayout>
 

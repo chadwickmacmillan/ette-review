@@ -4,10 +4,15 @@ import MainLayout from "src/layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
 import etteEnvelope from "@assets/etteenvelope.webp";
+import { winter2024 } from "@editions/winter2024";
 ---
 
 <SiteLayout title="Contact | -ette review">
-  <MainLayout>
+  <MainLayout
+    issueTitle={"Issue II: Winter 2024"}
+    issue={"winter2024"}
+    authors={winter2024}
+  >
     <div class="container-primary">
       <div class="text">
         <section>
@@ -19,11 +24,11 @@ import etteEnvelope from "@assets/etteenvelope.webp";
               class="italic">-ette</span
             > updates and submission calls.
           </p>
-      <SocialNav
-        facebookUrl={"https://www.facebook.com/profile.php?id=100092343586387"}
-        twitterUrl={"https://www.instagram.com/ettereview/"}
-        instagramUrl={"https://twitter.com/EtteReview"}
-      />
+          <SocialNav
+            facebookUrl={"https://www.facebook.com/profile.php?id=100092343586387"}
+            twitterUrl={"https://www.instagram.com/ettereview/"}
+            instagramUrl={"https://twitter.com/EtteReview"}
+          />
         </section>
       </div>
       <Image

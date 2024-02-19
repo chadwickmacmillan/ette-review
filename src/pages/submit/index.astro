@@ -4,10 +4,15 @@ import MainLayout from "@layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
 import cassette from "@assets/cassette.webp";
+import { winter2024 } from "@editions/winter2024";
 ---
 
 <SiteLayout title="Submit | -ette review">
-  <MainLayout>
+  <MainLayout
+    issueTitle={"Issue II: Winter 2024"}
+    issue={"winter2024"}
+    authors={winter2024}
+  >
     <div class="text">
       <section>
         <p>
@@ -135,7 +140,9 @@ import cassette from "@assets/cassette.webp";
             Beth will want to send it to you.
           </li>
           <li>
-            Ready? Email work to <a class="link" href="mailto:submissions@ettereview.com"
+            Ready? Email work to <a
+              class="link"
+              href="mailto:submissions@ettereview.com"
               >submissions@ettereview.com</a
             >. In the subject line, include your name and the category of
             submission (fiction, micro, prose poetry).

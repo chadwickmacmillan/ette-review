@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import etteLogo from "@assets/ettelogo.webp";
 import Nav from "./Nav.astro";
+const { issueTitle, issue, authors } = Astro.props;
 ---
 
 <header class="header">
@@ -15,7 +16,7 @@ import Nav from "./Nav.astro";
       />
     </a>
   </h1>
-  <Nav />
+  <Nav issueTitle={issueTitle} issue={issue} authors={authors}/>
 </header>
 
 <style lang="scss">
