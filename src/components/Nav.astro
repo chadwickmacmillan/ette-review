@@ -34,6 +34,15 @@ const { issueTitle, issue, authors } = Astro.props;
 <nav class="nav-container | fs-root">
   <NavToggler />
   <ul class="nav" id="nav" data-visible="false">
+    {
+      issue !== "winter2024" && (
+        <li>
+          <a class="nav-link" href={import.meta.env.BASE_URL + "winter2024/"}>
+            Issue II: Winter 2024
+          </a>
+        </li>
+      )
+    }
     <li
       aria-expanded="false"
       aria-haspopup="true"
