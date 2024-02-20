@@ -58,7 +58,7 @@ export const winter2024 = [
 		twitter: "https://twitter.com/",
 	},
 	{
-		name: "Douglas A Martin",
+		name: "Douglas A. Martin",
 		slug: "martin",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/martin_small.jpg",
 		instagram: "https://instagram.com/",
