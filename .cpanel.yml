@@ -1,4 +1,4 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home/migra197/public_html/admin/winter2024-demo  # Add /<app_folder> if required
-        - /bin cp /public_html/* $DEPLOYPATH                           #copy all from root 
+        - /bin cp -r /public_html/* $DEPLOYPATH                           #copy all from root 
