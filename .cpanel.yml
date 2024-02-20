@@ -1,0 +1,7 @@
+##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/migra197/public_html/admin/winter2024-demo/
+    - /bin/cp -R * $DEPLOYPATH
+
