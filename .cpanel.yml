@@ -1,4 +1,4 @@
 deployment:
       tasks:
         - export DEPLOYPATH=/home/migra197/public_html/admin/winter2024-demo
-        - /bin/cp -R public_html/* $DEPLOYPATH
+        - /bin/cp -R ./public_html/* $DEPLOYPATH
