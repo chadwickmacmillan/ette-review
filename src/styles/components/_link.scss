@@ -1,3 +1,11 @@
 .link {
 	color: var(--clr-orange);
 }
+
+.link.gray { {
+    color: var(--clr-gray);
+    &:hover {
+      color: var(--clr-orange);
+    }
+  }
+}
