@@ -4,10 +4,21 @@ const currentIndex = authors.findIndex((ath) => ath.slug === author.slug);
 const nextAuthor = authors[(currentIndex + 1) % authors.length];
 const prevAuthor =
   authors[(currentIndex - 1 + authors.length) % authors.length];
+const prev2ndAuthor = authors[(currentIndex - 2 + authors.length) % authors.length];
+const next2ndAuthor = authors[(currentIndex + 2) % authors.length];
 ---
 
 <ul class="author-nav | italic">
   {
+    prevAuthor.slug === "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `${slug}/` + prev2ndAuthor?.slug + "/"}>
+          {prev2ndAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+ {
     prevAuthor.slug !== "podette" && (
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + prevAuthor?.slug + "/"}>
@@ -21,6 +32,15 @@ const prevAuthor =
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + nextAuthor?.slug + "/"}>
           {nextAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+  {
+    nextAuthor.slug === "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `${slug}/` + next2ndAuthor?.slug + "/"}>
+          {next2ndAuthor?.name}
         </a>
       </li>
     )
