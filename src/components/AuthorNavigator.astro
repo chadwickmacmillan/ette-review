@@ -10,14 +10,14 @@ const prevAuthor =
   {
     prevAuthor.slug !== "podette" && (
       <li>
-        <a href={import.meta.env.BASE_URL + `/${slug}/` + prevAuthor?.slug + "/"}>
+        <a href={import.meta.env.BASE_URL + `${slug}/` + prevAuthor?.slug + "/"}>
           {prevAuthor?.name}
         </a>
       </li>
     )
   }
   {
-    prevAuthor.slug !== "podette" && (
+    nextAuthor.slug !== "podette" && (
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + nextAuthor?.slug + "/"}>
           {nextAuthor?.name}
