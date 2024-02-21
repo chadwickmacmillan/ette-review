@@ -12,7 +12,16 @@ const prev3rdAuthor = authors[(currentIndex - 3 + authors.length) % authors.leng
 
 <ul class="author-nav | italic">
   {
-    prevAuthor.slug === "podette" || prevAuthor.slug === false && (
+    prevAuthor.slug === "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `${slug}/` + prev3rdAuthor?.slug + "/"}>
+          {prev3rdAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+  {
+    prevAuthor.slug === false && (
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + prev2ndAuthor?.slug + "/"}>
           {prev2ndAuthor?.name}
@@ -39,7 +48,16 @@ const prev3rdAuthor = authors[(currentIndex - 3 + authors.length) % authors.leng
     )
   }
   {
-    nextAuthor.slug === "podette" || nextAuthor.slug === false && (
+    nextAuthor.slug === false && (
+      <li>
+        <a href={import.meta.env.BASE_URL + `${slug}/` + next3rdAuthor?.slug + "/"}>
+          {next3rdAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+{
+    nextAuthor.slug === false && (
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + next2ndAuthor?.slug + "/"}>
           {next2ndAuthor?.name}
