@@ -1,96 +1,95 @@
 const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u="
 const twitterShareUrl = "https://twitter.com/intent/tweet?url="
 const instagramShareUrl = "https://www.instagram.com/?url="
-const url = "https://ettereview.com" + import.meta.env.BASE_URL;
 
 export const fall2023 = [
 	{
 		name: "Andrew Bertaina",
 		slug: "bertaina",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/whales.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Patricia Q. Bidar",
 		slug: "bidar",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/doors.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Avitus B. Carle",
 		slug: "carle",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/airplane.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Kathy Fish",
 		slug: "fish",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/cone.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Eliot Li",
 		slug: "li",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/apron.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Jennifer Martelli",
 		slug: "martelli",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/jung.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Douglas A. Martin",
 		slug: "martin",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/fawn.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Cheryl Pappas",
 		slug: "pappas",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/reddress.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "M.A. Scott",
 		slug: "scott",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/petticoat.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "Eileen Tomarchio",
 		slug: "tomarchio",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/octopus.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: false,
 		slug: false,
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/lambette.webp",
-		instagram: function() { return instagramShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
-		facebook: function() { return facebookShareUrl + url + "archive/fall2023/" this.slug + "/"} 
-		twitter: function() { return twitterShareUrl + url + "archive/fall2023/" + this.slug + "/"} 
+		instagram: "share",
+		twitter: "share",
+		facebook: "share"
 	},
 	{
 		name: "pod-ette",
