@@ -1,7 +1,3 @@
-const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u="
-const twitterShareUrl = "https://twitter.com/intent/tweet?url="
-const instagramShareUrl = "https://www.instagram.com/?url="
-
 export const fall2023 = [
 	{
 		name: "Andrew Bertaina",

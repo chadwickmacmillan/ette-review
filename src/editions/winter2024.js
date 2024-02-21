@@ -1,6 +1,3 @@
-const "share" = "https://www.facebook.com/sharer/sharer.php?u="
-const "share" = "https://twitter.com/intent/tweet?url="
-const "share" = "https://www.instagram.com/?url="
 export const winter2024 = [
 	{
 		name: "Kelli Russell Agodon",

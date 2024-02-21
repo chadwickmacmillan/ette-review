@@ -1,10 +1,14 @@
 ---
 const { facebookUrl, instagramUrl, twitterUrl } = Astro.props;
+
+const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + Astro.url
+const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + Astro.url
+const instagramShareUrl = "https://www.instagram.com/?url=" + Astro.url
 ---
 
 <ul class="social-links">
   <li>
-    <a href={facebookUrl}>
+    <a href={facebookUrl === "share" ? facebookShareUrl : facebookUrl}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="bi bi-facebook"
@@ -17,7 +21,7 @@ const { facebookUrl, instagramUrl, twitterUrl } = Astro.props;
     </a>
   </li>
   <li>
-    <a href={instagramUrl}>
+    <a href={instagramUrl === "share" ? instagramShareUrl : instagramUrl}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="bi bi-instagram"
@@ -30,7 +34,7 @@ const { facebookUrl, instagramUrl, twitterUrl } = Astro.props;
     </a>
   </li>
   <li>
-    <a href={twitterUrl}>
+    <a href={twitterUrl === "share" ? twitterShareUrl : twitterUrl}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="bi bi-twitter"
