@@ -75,7 +75,7 @@ const { issueTitle, issue, authors } = Astro.props;
     {
       issue !== "winter2024" && (
         <li>
-          <a class="nav-link" href={import.meta.env.BASE_URL + "winter2024/"}>
+          <a href={import.meta.env.BASE_URL + "winter2024/"}>
             Issue II: Winter 2024
           </a>
         </li>
@@ -219,7 +219,7 @@ const { issueTitle, issue, authors } = Astro.props;
       position: absolute;
       top: 100%;
       left: 0;
-      width: 100%;
+      width: fit-content;
     }
   }
   .dropdown__menu {
