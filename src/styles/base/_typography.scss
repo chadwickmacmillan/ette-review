@@ -56,6 +56,9 @@ font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans
 /* Center text */
 .center {
 	text-align: center;
+	+ * {
+margin-top: 1em;
+	}
 }
 
 /* Bold, italic stylings */
@@ -76,7 +79,7 @@ font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans
 }
 
 /* Space between paragraphs */
-:is(p + p) {
+:is(p + *) {
 	margin-top: 1em;
 }
 
