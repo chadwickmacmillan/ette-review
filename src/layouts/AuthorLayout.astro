@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 <SiteLayout title={author?.name + " | -ette-review"} description="">
   <MainLayout issueTitle={issueTitle} issue={issue} authors={authors} >
   <div class="text">
-    <Image src={author?.imageSrc} alt="" height="400" width="400" />
+    <Image src={author?.imageSrc} alt="" height="400" width="400" class="author-img" />
     <slot />
     <AuthorNavigator authors={authors} author={author} slug={slug} />
     <SocialNav
