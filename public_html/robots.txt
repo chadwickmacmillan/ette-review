@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ettereview.com/sitemap-index.xml
