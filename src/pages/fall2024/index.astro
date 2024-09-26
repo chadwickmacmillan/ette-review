@@ -1,0 +1,19 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import GridLayout from "@layouts/GridLayout.astro";
+import Grid from "@components/Grid.astro";
+import { fall2024 } from "@editions/fall2024";
+
+---
+
+<SiteLayout title="Winter 2024 | -ette review">
+  <GridLayout
+    issueTitle={"Issue 3: Fall 2024"}
+    issue={"fall2024"}
+    authors={fall2024}
+  >
+    <Grid writers={fall2024} slug="fall2024" />
+  </GridLayout>
+</SiteLayout>
+
+<style></style>
