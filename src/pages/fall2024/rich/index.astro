@@ -1,0 +1,22 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { fall2024 } from "@editions/fall2024";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Rich from "./rich.html";
+---
+
+<AuthorLayout
+  authors={fall2024}
+  author={getCurrentAuthor(fall2024, "rich")}
+  slug="fall2024"
+  issueTitle={"Issue III: Fall 2024"}
+  issue={"fall2024"}
+>
+  <Rich />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-fall2024);
+  }
+</style>
