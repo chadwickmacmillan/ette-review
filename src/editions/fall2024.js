@@ -64,9 +64,10 @@ export const fall2024 = [
 		facebook: "share"
 	},
 	{
-		name: false,
-		slug: false,
-		imageSrc: import.meta.env.BASE_URL + "images/fall2024/leafpromo.jpg",
+		name: "pod-ette",
+		slug: "podette",
+		link: "podette",
+		imageSrc: import.meta.env.BASE_URL + "images/fall2024/podette.webp",
 		instagram: "share",
 		twitter: "share",
 		facebook: "share"
