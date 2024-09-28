@@ -1,5 +1,6 @@
 # generated types
 .astro/
+public_html/
 
 # dependencies
 node_modules/
