@@ -24,7 +24,7 @@ export const fall2024 = [
 		facebook: "share"
 	},
 	{
-		name: "Veda Khan",
+		name: "Veeda Khan",
 		slug: "khan",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/khan.jpg",
 		instagram: "share",
