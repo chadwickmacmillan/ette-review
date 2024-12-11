@@ -14,8 +14,8 @@ const prev3rdAuthor = authors[(currentIndex - 3 + authors.length) % authors.leng
   {
     prevAuthor.slug === "podette" && (
       <li>
-        <a href={import.meta.env.BASE_URL + `${slug}/` + prev3rdAuthor?.slug + "/"}>
-          {prev3rdAuthor?.name}
+        <a href={import.meta.env.BASE_URL + prevAuthor?.slug + "/"}>
+          {prevAuthor?.name}
         </a>
       </li>
     )
@@ -50,13 +50,22 @@ const prev3rdAuthor = authors[(currentIndex - 3 + authors.length) % authors.leng
   {
     nextAuthor.slug === false && (
       <li>
-        <a href={import.meta.env.BASE_URL + `${slug}/` + next3rdAuthor?.slug + "/"}>
-          {next3rdAuthor?.name}
+        <a href={import.meta.env.BASE_URL + next2ndAuthor?.slug + "/"}>
+          {next2ndAuthor?.name}
         </a>
       </li>
     )
   }
-{
+  {
+    nextAuthor.slug === "podette" && (
+      <li>
+        <a href={import.meta.env.BASE_URL + nextAuthor?.slug + "/"}>
+          {nextAuthor?.name}
+        </a>
+      </li>
+    )
+  }
+<!-- {
     nextAuthor.slug === false && (
       <li>
         <a href={import.meta.env.BASE_URL + `${slug}/` + next2ndAuthor?.slug + "/"}>
@@ -64,7 +73,7 @@ const prev3rdAuthor = authors[(currentIndex - 3 + authors.length) % authors.leng
         </a>
       </li>
     )
-  }
+  } -->
 </ul>
 <style lang="scss">
   .author-nav {

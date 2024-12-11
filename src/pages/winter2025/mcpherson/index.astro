@@ -1,0 +1,22 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { winter2025 } from "@editions/winter2025";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Mcpherson from "./mcpherson.html";
+---
+
+<AuthorLayout
+  authors={winter2025}
+  author={getCurrentAuthor(winter2025, "mcpherson")}
+  slug="winter2025"
+  issueTitle={"Issue IV: Winter 2025"}
+  issue={"winter2025"}
+>
+  <Mcpherson />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-winter2025);
+  }
+</style>

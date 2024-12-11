@@ -66,7 +66,6 @@ export const fall2024 = [
 	{
 		name: "pod-ette",
 		slug: "podette",
-		link: "/podette",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/podette.webp",
 		instagram: "share",
 		twitter: "share",
