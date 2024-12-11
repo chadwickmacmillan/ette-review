@@ -47,17 +47,7 @@ const { issueTitle, issue, authors } = Astro.props;
       </div>
       <div class="dropdown__menu-wrapper">
         <ul class="dropdown__menu">
-          {
-            authors.map((author) => (
-              author.slug !== "podette" && (
-              <li>
-                <a href={import.meta.env.BASE_URL + `${issue}/${author.slug}/`}>
-                  {author.name}
-                </a>
-              </li>
-              )
-            ))
-          }
+           {authors.map((author) => { if (author.slug !== false & author.slug !== "podette") { return ( <li> <a href={`${import.meta.env.BASE_URL}${issue}/${author.slug}/`}> {author.name} </a> </li> ); } })} 
         </ul>
       </div>
     </li>
