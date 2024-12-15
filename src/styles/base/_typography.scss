@@ -96,6 +96,15 @@ text-align: justify;
 	margin-top: 1em;
 }
 
+.number-list {
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+.number-list > li + li {
+	margin-top: 1em;
+}
+
 .line-height-1 {
 	line-height: 1;
 }

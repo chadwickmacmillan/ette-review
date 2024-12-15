@@ -1,0 +1,45 @@
+---
+import SiteLayout from "src/layouts/SiteLayout.astro";
+import MainLayout from "src/layouts/MainLayout.astro";
+import SocialNav from "@components/SocialNav.astro";
+import etteposter3 from "@assets/etteposter3.jpg";
+import { Image } from "astro:assets";
+import { winter2025 } from "@editions/winter2025";
+---
+
+<SiteLayout title="Merchandise | -ette review">
+  <MainLayout
+    issueTitle={"Issue IV: Winter 2025"}
+    issue={"winter2025"}
+    authors={winter2025}
+  >
+<div class="text">
+<section>
+<p>Coming soon.... </p>
+  <p>-ette review “planchette” poster</p>
+  <p>Printed on 110 lb Crane's Lettra Cotton at Fireball Printing in Philadelphia. 11 x 17". Signed and numbered by Beth Hahn, illustrator and co-editor of -ette.</p>
+  <p>Email <a href="mailto:merch@ettereview.com">merch@ettereview.com</a> for more information.</p>
+
+</section>
+<SocialNav
+            facebookUrl={"https://www.facebook.com/profile.php?id=100092343586387"}
+            twitterUrl={"https://twitter.com/EtteReview"}
+            instagramUrl={"https://www.instagram.com/ettereview"}
+          />
+</div>
+
+    <style>
+      :root {
+        --clr-bg-primary: var(--clr-bg-winter2025);
+      }
+      a {
+    color: var(--clr-gray);
+    &:hover {
+      color: var(--clr-orange);
+    }
+  }
+    </style>
+    
+    <Image src={etteposter3} alt="Watercolor of radio" width="400" height="410.5" />
+  </MainLayout>
+</SiteLayout>
