@@ -1,0 +1,22 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { spring2025 } from "@editions/spring2025";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Holman from "./holman.html";
+---
+
+<AuthorLayout
+  authors={spring2025}
+  author={getCurrentAuthor(spring2025, "holman")}
+  slug="spring2025"
+  issueTitle={"Issue 5: Spring 2025"}
+  issue={"spring2025"}
+>
+  <Holman />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-spring2025);
+  }
+</style>
