@@ -83,6 +83,7 @@ export const fall2023 = [
 		name: false,
 		slug: false,
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/lambette.webp",
+		link: " ",
 		instagram: "share",
 		twitter: "share",
 		facebook: "share"

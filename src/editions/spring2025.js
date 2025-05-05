@@ -48,9 +48,21 @@ export const spring2025 = [
 		facebook: "share"
 	},
 	{
+		name: false,
+		slug: false,
+		link: "https://begin-where-you-begin.vercel.app/intro",
+		imageSrc: import.meta.env.BASE_URL + "images/spring2025/lamb.jpg",
+	},
+	{
 		name: "pod-ette",
 		slug: "podette",
-		link: "/podette",
-		imageSrc: import.meta.env.BASE_URL + "images/spring2025/podette.webp",
+		link: "schmoogie",
+		imageSrc: import.meta.env.BASE_URL + "images/spring2025/headphones.jpg",
+	},
+	{
+		name: false,
+		slug: false,
+		link: "https://open.spotify.com/playlist/6ilzSZoDSto6w5sAwpuMOF?si=bLIHIxLYSaq-dCP-2scWKQ&pi=51ss10bqTr6BD",
+		imageSrc: import.meta.env.BASE_URL + "images/spring2025/lambflip.jpg",
 	},
 ];

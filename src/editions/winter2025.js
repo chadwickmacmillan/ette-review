@@ -59,6 +59,7 @@ export const winter2025 = [
 		name: false,
 		slug: false,
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/ouija.jpg",
+		link: " ",
 		instagram: "share",
 		twitter: "share",
 		facebook: "share"

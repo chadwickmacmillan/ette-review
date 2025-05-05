@@ -30,8 +30,8 @@ const createHref = () => {
     )
   }
   {
-    !writer?.name && (
-      <a href={import.meta.env.BASE_URL + "winter2025/"}>
+    !writer?.name && writer?.link && (
+      <a href={writer.link}>
         <Image src={writer.imageSrc } alt="" width="200" height="200" />
       </a>
     )
