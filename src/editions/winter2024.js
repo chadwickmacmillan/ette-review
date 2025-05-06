@@ -5,14 +5,14 @@ export const winter2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/agodon_small.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Amy Barnes",
 		slug: "barnes",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/barnes_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -20,7 +20,7 @@ export const winter2024 = [
 		slug: "blum",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/blum_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -29,7 +29,7 @@ export const winter2024 = [
 		imageSrc:
 			import.meta.env.BASE_URL + "images/winter2024/czyniejwski_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -37,7 +37,7 @@ export const winter2024 = [
 		slug: "hecker",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/hecker_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -46,7 +46,7 @@ export const winter2024 = [
 		imageSrc:
 			import.meta.env.BASE_URL + "images/winter2024/hollmeyer_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -54,7 +54,7 @@ export const winter2024 = [
 		slug: "kaufman",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/kaufman_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -62,7 +62,7 @@ export const winter2024 = [
 		slug: "martin",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/martin_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -70,7 +70,7 @@ export const winter2024 = [
 		slug: "mundell",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/mundell_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -78,7 +78,7 @@ export const winter2024 = [
 		slug: "purdy",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/purdy_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -86,7 +86,7 @@ export const winter2024 = [
 		slug: "witte",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/witte_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 	{
@@ -94,7 +94,7 @@ export const winter2024 = [
 		slug: "zhang",
 		imageSrc: import.meta.env.BASE_URL + "images/winter2024/zhang_small.jpg",
 		instagram: "share",
-		facebook: "share",
+		bluesky: "share",
 		twitter: "share",
 	},
 ];

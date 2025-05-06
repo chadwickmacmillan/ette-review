@@ -5,7 +5,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/fletcher.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Kelle Groom",
@@ -13,7 +13,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/groom.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Bryana Joy",
@@ -21,7 +21,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/joy.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Veeda Khan",
@@ -29,7 +29,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/khan.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Amy Marques",
@@ -37,7 +37,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/marques.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Kathleen McGookey",
@@ -45,7 +45,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/mcgookey.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Susan Rich",
@@ -53,7 +53,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/rich.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Cathy Ulrich",
@@ -61,7 +61,7 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/ulrich.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "pod-ette",
@@ -69,6 +69,6 @@ export const fall2024 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2024/podette.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 ];

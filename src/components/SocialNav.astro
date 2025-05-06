@@ -1,13 +1,16 @@
 ---
-const { facebookUrl, instagramUrl, twitterUrl } = Astro.props;
+import { ASTRO_CONFIG_DEFAULTS } from "astro/dist/core/config/schema";
+
+const { facebookUrl, instagramUrl, twitterUrl, blueskyUrl } = Astro.props;
 
 const facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" + Astro.url
 const twitterShareUrl = "https://twitter.com/intent/tweet?url=" + Astro.url
 const instagramShareUrl = "https://www.instagram.com/?url=" + Astro.url
+const blueskyShareUrl = "https://bsky.app/intent/compose/?text=" + Astro.url
 ---
 
 <ul class="social-links">
-  <li>
+<!--   <li>
     <a href={facebookUrl === "share" ? facebookShareUrl : facebookUrl}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +45,20 @@ const instagramShareUrl = "https://www.instagram.com/?url=" + Astro.url
       >
         <path
           d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"
+        ></path>
+      </svg>
+    </a>
+  </li> -->
+  <li> 
+    <a href={blueskyUrl === "share" ? blueskyShareUrl : blueskyUrl}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="bi bi-bluesky"
+        width="10%" height="10%"
+        viewBox="0 0 2367 2088"
+      >
+        <path
+          d="M513.004,140.265c271.334,203.704 563.167,616.739 670.329,838.373c107.163,-221.634 398.996,-634.669 670.33,-838.373c195.779,-146.981 513.004,-260.708 513.004,101.178c-0,72.272 -41.438,607.136 -65.742,693.978c-84.479,301.887 -392.312,378.887 -666.146,332.283c478.646,81.463 600.404,351.296 337.442,621.129c-499.417,512.467 -717.8,-128.579 -773.758,-292.837c-10.259,-30.113 -15.059,-44.2 -15.13,-32.221c-0.07,-11.979 -4.87,2.108 -15.129,32.221c-55.958,164.258 -274.341,805.304 -773.759,292.837c-262.963,-269.833 -141.204,-539.666 337.443,-621.129c-273.834,46.604 -581.665,-30.396 -666.147,-332.283c-24.302,-86.842 -65.741,-621.706 -65.741,-693.978c0,-361.886 317.227,-248.159 513.004,-101.178Z"
         ></path>
       </svg>
     </a>

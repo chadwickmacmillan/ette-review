@@ -3,17 +3,13 @@ export const fall2023 = [
 		name: "Andrew Bertaina",
 		slug: "bertaina",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/whales.webp",
-		instagram: "share",
-		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Patricia Q. Bidar",
 		slug: "bidar",
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/doors.webp",
-		instagram: "share",
-		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Avitus B. Carle",
@@ -21,7 +17,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/airplane.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Kathy Fish",
@@ -29,7 +25,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/cone.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Eliot Li",
@@ -37,7 +33,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/apron.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Jennifer Martelli",
@@ -45,7 +41,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/jung.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Douglas A. Martin",
@@ -53,7 +49,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/fawn.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Cheryl Pappas",
@@ -61,7 +57,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/reddress.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "M.A. Scott",
@@ -69,7 +65,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/petticoat.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Eileen Tomarchio",
@@ -77,7 +73,7 @@ export const fall2023 = [
 		imageSrc: import.meta.env.BASE_URL + "images/fall2023/octopus.webp",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: false,
@@ -86,7 +82,7 @@ export const fall2023 = [
 		link: " ",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "pod-ette",

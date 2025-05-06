@@ -5,7 +5,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/david.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Tricia Knoll",
@@ -13,7 +13,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/knoll.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Laurin Becker Macios",
@@ -21,7 +21,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/macios.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Krista Madsen",
@@ -29,7 +29,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/madsen.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Karen McPherson",
@@ -37,7 +37,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/mcpherson.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Michelle Reale",
@@ -45,7 +45,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/reale.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "Tara Isabel Zambrano",
@@ -53,7 +53,7 @@ export const winter2025 = [
 		imageSrc: import.meta.env.BASE_URL + "images/winter2025/zambrano.jpg",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: false,
@@ -62,7 +62,7 @@ export const winter2025 = [
 		link: " ",
 		instagram: "share",
 		twitter: "share",
-		facebook: "share"
+		bluesky: "share"
 	},
 	{
 		name: "pod-ette",
