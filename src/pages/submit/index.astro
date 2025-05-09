@@ -4,14 +4,14 @@ import MainLayout from "@layouts/MainLayout.astro";
 import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
 import cassette from "@assets/cassette.webp";
-import { winter2025 } from "@editions/winter2025";
+import { spring2025 } from "@editions/spring2025";
 ---
 
 <SiteLayout title="Submit | -ette review">
   <MainLayout
-    issueTitle={"Issue 4: Winter 2025"}
-    issue={"winter2025"}
-    authors={winter2025}
+    issueTitle={"Issue 5: Spring 2025"}
+    issue={"spring2025"}
+    authors={spring2025}
   >
     <div class="text">
       <section>
@@ -110,7 +110,7 @@ import { winter2025 } from "@editions/winter2025";
 <style>
 
 :root {
-    --clr-bg-primary: var(--clr-bg-winter2025);
+    --clr-bg-primary: var(--clr-bg-spring2025);
   }
 
 a {
