@@ -1,0 +1,23 @@
+---
+import SiteLayout from "@layouts/SiteLayout.astro";
+import GridLayout from "@layouts/GridLayout.astro";
+import Grid from "@components/Grid.astro";
+import { fall2025 } from "@editions/fall2025";
+
+---
+
+<SiteLayout title="Fall 2025 | -ette review">
+  <GridLayout
+    issueTitle={"Issue 6: Fall 2025"}
+    issue={"fall2025"}
+    authors={fall2025}
+  >
+    <Grid writers={fall2025} slug="fall2025" />
+  </GridLayout>
+</SiteLayout>
+
+<style>
+   :root {
+    --clr-bg-primary: var(--clr-bg-fall2025);
+  }
+</style>

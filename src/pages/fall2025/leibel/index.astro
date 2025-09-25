@@ -1,0 +1,22 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { fall2025 } from "@editions/fall2025";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Leibel from "./leibel.html";
+---
+
+<AuthorLayout
+  authors={fall2025}
+  author={getCurrentAuthor(fall2025, "leibel")}
+  slug="fall2025"
+  issueTitle={"Issue 6: Fall 2025"}
+  issue={"fall2025"}
+>
+  <Leibel />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-fall2025);
+  }
+</style>
