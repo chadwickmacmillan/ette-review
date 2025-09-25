@@ -1,0 +1,223 @@
+<!DOCTYPE html><style>		
+schmoogy {
+    background-image: url("http://margaretmadethis.com/wp-content/uploads/2025/07/rouletteplayer.webp");
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	margin-right: 80px;
+	margin-top:50px;
+	min-height: 100vh;
+	display:grid;
+	place-content: center;
+	}
+			
+.gallery {
+    display:grid;
+	gap: 10px;
+	grid-template-columns: auto 0 auto;
+	place-items: center;
+	border-radius: 50%;
+	overflow: hidden;
+	animation: spin 8s linear infinite;		
+	}
+		
+@keyframes spin {
+	from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+		}
+		
+.gallery:hover { animation-play-state: paused; }
+		
+.gallery > a {
+	display: grid;
+	}
+		
+.gallery > a > img {
+	width: 200px; /* control the size */
+	aspect-ratio: 1;
+	object-fit: cover;
+	transition: .35s;
+	filter: grayscale();
+	cursor: pointer;		
+	}
+		
+.gallery > a > img:hover {
+			filter: grayscale(0%);
+    }
+.gallery > a:nth-child(1) > img {
+			clip-path: polygon(0 0,50% 0,100% 100%,0 100%);
+	}
+.gallery > a:nth-child(2) > img {
+			clip-path: polygon(0 0,100% 0,50% 100%);
+	}
+.gallery > a:nth-child(3) > img {
+			clip-path: polygon(50% 0,100% 0,100% 100%,0 100%);
+	}
+.gallery > a:nth-child(4) > img {
+			clip-path: polygon(0 0,100% 0,50% 100%,0 100%);
+	}
+.gallery > a:nth-child(5) > img {
+			clip-path: polygon(50% 0,100% 100%,0% 100%);
+	}
+.gallery > a:nth-child(6) > img {
+			clip-path: polygon(0 0,100% 0,100% 100%,50% 100%);
+	}
+		
+.textbox {
+	width: 0;
+    height: 0;
+	margin-left:100px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(255, 20, 20, 0.53);
+	}
+			
+.textbox1 {width: 325px;
+	padding-top: 10px;
+	align-content: center;
+	align-items: center;
+    color: ghostwhite;
+    font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+	background-color: rgba(255, 20, 20, 0.53);
+	font-size: 20px;
+	font-weight:600;
+}
+		
+	
+		
+.textbox1 a  {
+			text-decoration:none;
+			color:darkslategray;
+			}
+		
+.textbox1 a:hover { color:lightgreen;
+			transition: .5s;}
+		
+.textbox1 a:visited { color: red;}
+		
+.textbox2:before {
+    content: "&";
+    font-size: 4em;
+    line-height: 1em;
+    color: #d2dee5;
+	margin: 10px;}
+		
+.textbox2 {width: 400px;
+	align-content:space-between;
+	align-items:center;
+    color: #d2dee5;
+    font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+	background-color: rgba(255, 20, 20, 0.53);
+	font-size: 30px;
+	display: grid;
+    grid-template-columns: auto 1fr;
+	
+    padding-left: 0px;
+    position: relative; 
+}
+		
+		.textbox2 a  {
+			text-decoration:none;
+			color:white;
+			font-weight:600;
+			}
+		
+		.textbox2 a:hover { color:crimson;
+			transition: .5s;}
+		
+		.textbox2 a:visited { color: red;}
+		
+	
+/* @media screen and (max-width: 991px) {
+	
+		body {
+				background-image: url("http://margaretmadethis.com/wp-content/uploads/2025/07/rouletteplayer.webp");
+				background-repeat: no-repeat;
+  background-position: center;
+			background-size: contain;
+			margin-right: 80px;
+				margin-top:20px;
+			min-height: 100vh;
+			display:grid;
+			place-content: center;
+			
+		}
+
+		.textbox1 {width: 320px;
+			padding-top: 10px;
+			align-content: center;
+			align-items: center;
+  color: ghostwhite;
+  font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+	  background-color: rgba(255, 20, 20, 0.53);
+			font-size: 18px;
+			font-weight:600;
+
+}
+		
+}
+
+@media screen and (max-width: 540px) {
+	
+		body {
+				background-image: url("http://margaretmadethis.com/wp-content/uploads/2025/07/rouletteplayer.webp");
+				background-repeat: no-repeat;
+  background-position: left;
+			background-size: contain;
+			margin-right: 80px;
+				margin-top:20px;
+			min-height: 100vh;
+			display:grid;
+			place-content: center;
+			
+		}
+	
+	.textbox1 {width: 220px;
+			padding-top: 10px;
+			align-content: center;
+			align-items: center;
+  color: ghostwhite;
+  font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+	  background-color: rgba(255, 20, 20, 0.53);
+			font-size: 18px;
+			font-weight:500;
+}
+} */  	
+</style>
+
+<div class="schmoogy">
+	
+	<div class="gallery">
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_canoe-blk.jpg" alt="ette drawing">
+		</a>
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_childrenred.jpg" alt="ette drawing">
+		</a>
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_glassesblkjpg.jpg" alt="ette drawing">
+		</a>
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_girlred.jpg" alt="ette drawing">
+		</a>
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_pieblk.jpg" alt="ette drawing">
+		</a>
+		<a href="#">
+			<img src="http://margaretmadethis.com/wp-content/uploads/2025/07/img_lemonred.jpg" alt="ette drawing"></a>
+	</div>
+	
+	<div class="textbox"></div>
+
+			<div class="textbox1">
+		<p>
+			<ul><li>Jose Hernandez Diaz: <br><a href="#">"When Do Dahlias Bloom"</a> & <a href="#">"The Search"</a> </li><br>
+			<li>Suzy Eynon: <br><a href="#">"Landlines"</a></li><br> 
+			<li>Rachel Kowalsky: <br><a href="#">"Dear Dolores"</a></li><br> 
+			<li>Matt Leibel: <br><a href="#">"How to Buy a Snow Globe"</a></li><br>
+			<li>Emma Raimondo: <br><a href="#">"Death in Los Angeles"</a></li><br> 
+			<li><a href="#">"story"<br> by name</a></li></ul>
+			</p></div>
+	<div class="textbox2"><p><a href="#">PODETTE</a> <br>with Melanie Hoopes</p></div>
+
+    </div>
