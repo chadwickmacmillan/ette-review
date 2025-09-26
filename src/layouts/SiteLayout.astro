@@ -1,6 +1,7 @@
 ---
 import "../styles/styles.scss";
-
+import { Image } from "astro:assets";
+import localEtteLogo from "@assets/ettelogo.webp";
 const { title, description, ogimage } = Astro.props;
 ---
 
@@ -12,7 +13,7 @@ const { title, description, ogimage } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:image" content={ogimage} />
+    <meta property="og:image" content={ogimage || "/images/ettelogo.webp"} />
     <title>{title}</title>
   </head>
   <body class="body | bg-primary times">
