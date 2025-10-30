@@ -4,14 +4,14 @@ import MainLayout from "src/layouts/MainLayout.astro";
 import podette from "@assets/podette.webp";
 import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
-import { spring2025 } from "@editions/spring2025";
+import { fall2025 } from "@editions/fall2025";
 ---
 
 <SiteLayout title="podette | -ette review">
   <MainLayout
-    issueTitle={"Issue 5: Spring 2025"}
-    issue={"spring2025"}
-    authors={spring2025}
+    issueTitle={"Issue 6: Fall 2025"}
+    issue={"fall2025"}
+    authors={fall2025}
   >
     <div class="text">
       <section>
@@ -26,6 +26,14 @@ import { spring2025 } from "@editions/spring2025";
         <p>
           Welcome to <span class="italic">pod-ette</span>, the podcast companion
           to the literary magazine <span class="italic">-ette</span>! </p>
+
+<p>In Episode 6, Melanie gives a prescription for these preposterous times: a heavy dose of art (among other things). She talks with Rachel Kowalsky (“Dear Dolores”) and Matt Leibel (“How to Buy a Snow Globe”) about work that has recently reconfigured them. Original music for <span class="italic">pod-ette</span> is by <a href="http://www.chesterjankowski.com">Chester Jankowski.</a></p>
+
+<p>Listen to <span class="italic">pod-ette</span> here: <a
+  href="https://open.spotify.com/episode/60GBYE6bYWWQJXf7YgdHLi"
+  >Episode 6 - Roulette: Take a Chance on Art</a></p>
+
+  <p><div class="center">***</div>
 
 <p>In Episode 5, Melanie Hoopes is existing in a gloomy fantasy world until she finds a little glimmer of hope in the re-creation of a horrendous natural disaster. She visits with S.D. Pergola (“Thoughts on the Incoming Snow”), Jessica Barlevi (“Forest of Light”), and Amy Holman (“Stuck”) about how they are faring in these treacherous times. Original music for <span class="italic">pod-ette</span> is by <a href="http://www.chesterjankowski.com">Chester Jankowski.</a></p>
 
@@ -84,10 +92,9 @@ import { spring2025 } from "@editions/spring2025";
   </MainLayout>
 </SiteLayout>
 
-<style>
-  
+<style>  
   :root {
-    --clr-bg-primary: var(--clr-bg-spring2025);
+    --clr-bg-primary: var(--clr-bg-fall2025);
   }
   a {
     color: var(--clr-gray);

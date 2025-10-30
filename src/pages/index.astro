@@ -12,6 +12,7 @@ import localEtteLogo from "@assets/ettelogo.webp";
         <Image src={localEtteLogo} alt="-ette review logo." />
       </h1>
       <div class="subheading">
+        <a href={import.meta.env.BASE_URL + "fall2025/"} class="line-height-1">Fall 2025: Roulette</a>
         <a href={import.meta.env.BASE_URL + "spring2025/"} class="line-height-1">Spring 2025</a>
         <a href={import.meta.env.BASE_URL + "winter2025/"} class="line-height-1">Winter 2025: Planchette</a>
         <a href={import.meta.env.BASE_URL + "fall2024/"} class="line-height-1">Fall 2024</a>
@@ -75,7 +76,8 @@ import localEtteLogo from "@assets/ettelogo.webp";
   }
   .ette-definition {
     font-size: var(--fs-root);
-    position: absolute;
+    margin-left: min(76px, 17vw);
+    // position: absolute;
     bottom: max(25%, 100px);
     left: min(15%, 250px);
   }
