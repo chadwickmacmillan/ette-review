@@ -1,0 +1,494 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>-ette issue 7: winter 2026</title>
+	
+	<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	background: linear-gradient(180deg, rgba(66, 72, 84, 1) 10%, rgba(96, 96, 135, 1) 46%, rgba(247, 250, 250, 1) 89%);
+}
+
+ul {
+	padding: 20px;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+}
+
+li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 20px;
+}
+
+li:nth-child(1) button {
+	background: url("/images/winter2026/camp.jpg") no-repeat center / cover;
+}
+li:nth-child(2) button {
+	background: url("/images/winter2026/heil.jpg") no-repeat center / cover;
+}
+li:nth-child(3) button {
+	background: url("/images/winter2026/kaufman.jpg") no-repeat center / cover;
+}
+li:nth-child(4) button {
+	background: url("/images/winter2026/macdonald.jpg") no-repeat center / cover;
+}
+li:nth-child(5) button {
+	background: url("/images/winter2026/marino.jpg") no-repeat center / cover;
+}
+li:nth-child(6) button {
+	background: url("/images/winter2026/mcomber.jpg") no-repeat center / cover;
+}
+li:nth-child(7) button {
+	background: url("/images/winter2026/podette.jpg") no-repeat center / cover;
+}
+li:nth-child(8) button {
+	background: url("/images/winter2026/newsletter.jpg") no-repeat center / cover;
+}
+
+button {
+	position: relative;
+	width: 170px;
+	height: 170px;
+	border-radius: 50%;
+	border: 5px solid white;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 25px;
+	color: black;
+	text-transform: lowercase;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #0D1B5E;
+	letter-spacing: 3px;
+	text-stroke: 1px black;
+	cursor: pointer;
+	padding: 10px;
+	opacity: 0.6;
+	transition: opacity 0.3s;
+	filter: blur(.5px) drop-shadow(0 0 0.75rem rgb(248, 248, 255));
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.snow-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.snowflake {
+	position: absolute;
+	top: -10px;
+	color: white;
+	font-size: 1em;
+	user-select: none;
+	pointer-events: none;
+	animation: fall 3s linear infinite;
+	filter: blur(3px);
+	opacity: 0.5;
+}
+
+.snow.s1 {
+	width: 5px;
+	height: 5px;
+	animation-duration: 15s;
+	left: 10%;
+}
+
+.snow.s2 {
+	width: 8px;
+	height: 8px;
+	animation-duration: 5s;
+	left: 40%;
+}
+
+.snow.s3 {
+	width: 9px;
+	height: 9px;
+	animation-duration: 1.5s;
+	left: 60%;
+}
+
+.snow.s4 {
+	width: 12px;
+	height: 12px;
+	animation-duration: 2s;
+	left: 70%;
+}
+
+.snow.s5 {
+	width: 4px;
+	height: 4px;
+	animation-duration: 1s;
+	left: 80%;
+}
+
+.snow.s6 {
+	width: 10px;
+	height: 8px;
+	animation-duration: 3s;
+	left: 10%;
+}
+
+@keyframes fall {
+	0% {
+		top: -10%;
+		opacity: 0.6;
+	}
+	100% {
+		top: 100%;
+		opacity: 0.5;
+	}
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+	margin-top: 20px;
+	text-align: center;
+	padding: 20px;
+	padding-top: 10vh;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.text {
+	position: relative;
+	z-index: 1;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 50px;
+	color: white;
+	text-transform: lowercase;
+	-webkit-text-fill-color: rgba(66, 72, 84, 1);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+	letter-spacing: 3px;
+	text-stroke: 1px white;
+	margin-top: 20px;
+	text-align: center;
+	filter: blur(1px);
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+	.text {
+		font-size: 36px;
+        font-weight: bold;
+		letter-spacing: 2px;
+	}
+	
+	button {
+		width: 140px;
+		height: 140px;
+		font-size: 20px;
+		letter-spacing: 2px;
+	}
+	
+	li {
+		margin: 15px;
+	}
+	
+	ul {
+		padding: 15px;
+	}
+	
+	.content {
+		padding-top: 5vh;
+	}
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+	.text {
+		font-size: 28px;
+		letter-spacing: 1px;
+    font-weight: bold;
+		margin-top: 10px;
+	}
+	
+	button {
+		width: 120px;
+		height: 120px;
+		font-size: 18px;
+		letter-spacing: 1px;
+		border: 3px solid white;
+	}
+	
+	li {
+		margin: 10px;
+	}
+	
+	ul {
+		padding: 10px;
+	}
+	
+	.content {
+		padding: 10px;
+		padding-top: 3vh;
+	}
+	
+	/* Reduce snowflake count on mobile for performance */
+	.snowflake {
+		font-size: 0.8em;
+	}
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 360px) {
+	.text {
+		font-size: 24px;
+	}
+	
+	button {
+		width: 100px;
+		height: 100px;
+		font-size: 16px;
+	}
+	
+	li {
+		margin: 8px;
+	}
+}
+
+/* Landscape Mobile Styles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.content {
+		padding-top: 2vh;
+	}
+	
+	.text {
+		font-size: 24px;
+		margin-top: 10px;
+	}
+	
+	button {
+		width: 100px;
+		height: 100px;
+		font-size: 16px;
+	}
+	
+	li {
+		margin: 8px;
+	}
+}
+	</style>
+	
+</head>
+<body>
+	<div class="snow-container">
+		<div class="snow snowflake s1">❄</div>
+		<div class="snow snowflake s2">❄</div>
+		<div class="snow snowflake s3">❄</div>
+		<div class="snow snowflake s4">❄</div>
+		<div class="snow snowflake s5">❄</div>
+		<div class="snow snowflake s6">❄</div>
+	</div>
+
+	<div class="content">
+		<div class="text">-ette: winter 2026</div>
+
+		<ul>
+			<li>
+				<a href="camp/"><button>camp</button></a>
+			</li>
+			<li>
+				<a href="#"><button>heil</button></a>
+			</li>
+			<li>
+				<a href="#"><button>kaufman</button></a>
+			</li>
+			<li>
+				<a href="#"><button>macdonald</button></a>
+			</li>
+			<li>
+				<a href="#"><button>marino</button></a>
+			</li>
+			<li>
+				<a href="#"><button>McOmber</button></a>
+			</li>
+			<li>
+				<a href="#"><button>pod-ette</button></a>
+			</li>
+			<li>
+				<a href="#"><button>newsletter</button></a>
+			</li>
+		</ul>
+		<div class="text">issue 7<br><br><br></div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	
+	<script>
+class HoverButton {
+	constructor(el) {
+		this.el = el;
+		this.hover = false;
+		this.calculatePosition();
+		this.attachEventsListener();
+	}
+	
+	attachEventsListener() {
+		window.addEventListener('mousemove', e => this.onMouseMove(e));
+		window.addEventListener('resize', e => this.calculatePosition(e));
+		
+		// Add touch events for mobile
+		this.el.addEventListener('touchstart', e => this.onTouchStart(e));
+		this.el.addEventListener('touchend', e => this.onTouchEnd(e));
+	}
+	
+	calculatePosition() {
+		gsap.set(this.el, {
+			x: 0,
+			y: 0,
+			scale: 1
+		});
+		const box = this.el.getBoundingClientRect();
+		this.x = box.left + (box.width * 0.5);
+		this.y = box.top + (box.height * 0.5);
+		this.width = box.width;
+		this.height = box.height;
+	}
+	
+	onMouseMove(e) {
+		// Skip hover effects on touch devices
+		if ('ontouchstart' in window) return;
+		
+		let hover = false;
+		let hoverArea = (this.hover ? 0.7 : 0.5);
+		let x = e.clientX - this.x;
+		let y = e.clientY - this.y;
+		let distance = Math.sqrt(x * x + y * y);
+		if (distance < (this.width * hoverArea)) {
+			hover = true;
+			if (!this.hover) {
+				this.hover = true;
+			}
+			this.onHover(e.clientX, e.clientY);
+		}
+		
+		if (!hover && this.hover) {
+			this.onLeave();
+			this.hover = false;
+		}
+	}
+	
+	onTouchStart(e) {
+		gsap.to(this.el, {
+			scale: 1.1,
+			ease: 'power2.out',
+			duration: 0.2
+		});
+		this.el.style.zIndex = 10;
+	}
+	
+	onTouchEnd(e) {
+		gsap.to(this.el, {
+			scale: 1,
+			ease: 'power2.out',
+			duration: 0.2
+		});
+		setTimeout(() => {
+			this.el.style.zIndex = 1;
+		}, 200);
+	}
+	
+	onHover(x, y) {
+		gsap.to(this.el, {
+			x: (x - this.x) * 0.4,
+			y: (y - this.y) * 0.4,
+			scale: 1.15,
+			ease: 'power2.out',
+			duration: 0.4
+		});
+		this.el.style.zIndex = 10;
+	}
+	
+	onLeave() {
+		gsap.to(this.el, {
+			x: 0,
+			y: 0,
+			scale: 1,
+			ease: 'elastic.out(1.2, 0.4)',
+			duration: 0.7
+		});
+		this.el.style.zIndex = 1;
+	}
+}
+
+// Initialize all buttons
+const buttons = document.querySelectorAll('button');
+buttons.forEach(btn => new HoverButton(btn));
+	</script>
+	    
+	<script>
+		function createSnowflake() {
+			const snowflake = document.createElement('div');
+			snowflake.classList.add('snowflake');
+			snowflake.innerHTML = '❄';
+			
+			// Random horizontal position
+			snowflake.style.left = Math.random() * 100 + '%';
+			
+			// Random size
+			const size = Math.random() * 1 + 0.5;
+			snowflake.style.fontSize = size + 'em';
+			
+			// Random animation duration (falling speed)
+			const duration = Math.random() * 10 + 10;
+			snowflake.style.animationDuration = duration + 's';
+			
+			// Random delay
+			const delay = Math.random() * 5;
+			snowflake.style.animationDelay = delay + 's';
+			
+			document.querySelector('.snow-container').appendChild(snowflake);
+			
+			// Remove snowflake after animation completes
+			setTimeout(() => {
+				snowflake.remove();
+			}, (duration + delay) * 1000);
+		}
+
+		// Reduce snowflake count on mobile
+		const isMobile = window.innerWidth <= 768;
+		const snowflakeCount = isMobile ? 25 : 50;
+		const snowflakeInterval = isMobile ? 600 : 300;
+
+		// Create initial snowflakes
+		for (let i = 0; i < snowflakeCount; i++) {
+			setTimeout(() => {
+				createSnowflake();
+			}, i * 100);
+		}
+
+		// Continuously add new snowflakes
+		setInterval(createSnowflake, snowflakeInterval);
+	</script>
+		
+</body>
+</html>
