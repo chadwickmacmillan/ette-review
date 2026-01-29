@@ -1,0 +1,28 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { winter2026 } from "@editions/winter2026";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Heil from "./heil.html";
+---
+
+<AuthorLayout
+  authors={winter2026}
+  author={getCurrentAuthor(winter2026, "heil")}
+  slug="winter2026"
+  issueTitle={"Issue 7: Winter 2026"}
+  issue={"winter2026"}
+>
+  <Heil />
+</AuthorLayout>
+
+<style>
+
+  :global(.text.text > .author-img) {
+    float: none;
+    margin-inline: auto;
+}  
+
+  :root {
+    --clr-bg-primary: var(--clr-bg-winter2026);
+  }
+</style>

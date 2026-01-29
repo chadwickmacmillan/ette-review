@@ -1,0 +1,22 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { winter2026 } from "@editions/winter2026";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Camp from "./camp.html";
+---
+
+<AuthorLayout
+  authors={winter2026}
+  author={getCurrentAuthor(winter2026, "camp")}
+  slug="winter2026"
+  issueTitle={"Issue 7: Winter 2026"}
+  issue={"winter2026"}
+>
+  <Camp />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-winter2026);
+  }
+</style>
