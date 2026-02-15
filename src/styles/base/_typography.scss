@@ -111,4 +111,10 @@ text-align: justify;
 
 .bio {
 font-size: var(--fs-100);
+a {
+    color: var(--clr-gray);
+    &:hover {
+      color: var(--clr-orange);
+    }
+  }
 }
