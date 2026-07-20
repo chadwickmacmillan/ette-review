@@ -1,0 +1,28 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { summer2026 } from "@editions/summer2026";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Pokrass from "./pokrass.html";
+---
+
+<AuthorLayout
+  authors={summer2026}
+  author={getCurrentAuthor(summer2026, "pokrass")}
+  slug="summer2026"
+  issueTitle={"Issue 8: Summer 2026"}
+  issue={"summer2026"}
+>
+  <Pokrass />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-summer2026);
+  }
+  a {
+    color: var(--clr-gray);
+    &:hover {
+      color: var(--clr-orange);
+    }
+  }
+</style>
