@@ -35,4 +35,22 @@ export const summer2026 = [
 		imageSrc: import.meta.env.BASE_URL + "images/summer2026/rios.jpg",
 		bluesky: "share"
 	},
+		{
+		name: "pod-ette",
+		slug: "podette",
+		link: "schmoogie",
+		imageSrc: import.meta.env.BASE_URL + "images/summer2026/headphones.jpg",
+	},
+		{
+		name: false,
+		slug: false,
+		link: "https://sendfox.com/ettereview/feed",
+		imageSrc: import.meta.env.BASE_URL + "images/summer2026/newsletter.webp",
+	},
+		{
+		name: false,
+		slug: false,
+		link: "https://open.spotify.com/episode/6gAxDOzzPuGdv4dbDMnvMf",
+		imageSrc: import.meta.env.BASE_URL + "images/summer2026/lambflip.jpg",
+	},
 ];
