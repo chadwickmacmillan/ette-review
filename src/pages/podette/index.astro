@@ -4,14 +4,14 @@ import MainLayout from "src/layouts/MainLayout.astro";
 import podette from "@assets/podette.webp";
 import SocialNav from "@components/SocialNav.astro";
 import { Image } from "astro:assets";
-import { winter2026 } from "@editions/winter2026";
+import { summer2026 } from "@editions/summer2026";
 ---
 
 <SiteLayout title="pod-ette | -ette review">
   <MainLayout
-    issueTitle={"Issue 7: Winter 2026"}
-    issue={"winter2026"}
-    authors={winter2026}
+    issueTitle={"Issue 8: Summer 2026"}
+    issue={"summer2026"}
+    authors={summer2026}
   >
 <div class="text">
   <section>
@@ -98,7 +98,7 @@ href="https://podcasters.spotify.com/pod/show/mhoopes-us/episodes/pod-ette-e29e2
 
 <style>  
   :root {
-    --clr-bg-primary: var(--clr-bg-winter2026);
+    --clr-bg-primary: var(--clr-bg-summer2026);
   }
   a {
     color: var(--clr-gray);
