@@ -50,7 +50,7 @@ export const summer2026 = [
 		{
 		name: false,
 		slug: false,
-		link: "https://open.spotify.com/episode/6gAxDOzzPuGdv4dbDMnvMf",
-		imageSrc: import.meta.env.BASE_URL + "images/summer2026/lambflip.jpg",
+		link: import.meta.env.BASE_URL + "submit/",
+		imageSrc: import.meta.env.BASE_URL + "images/summer2026/suffragette_med.jpg",
 	},
 ];
