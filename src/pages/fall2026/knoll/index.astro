@@ -1,0 +1,28 @@
+---
+import AuthorLayout from "@layouts/AuthorLayout.astro";
+import { fall2026 } from "@editions/fall2026";
+import { getCurrentAuthor } from "@utils/getCurrentAuthor";
+import Knoll from "./knoll.html";
+---
+
+<AuthorLayout
+  authors={fall2026}
+  author={getCurrentAuthor(fall2026, "knoll")}
+  slug="fall2026"
+  issueTitle={"Issue 9: Fall 2026"}
+  issue={"fall2026"}
+>
+  <Knoll />
+</AuthorLayout>
+
+<style>
+  :root {
+    --clr-bg-primary: var(--clr-bg-fall2026);
+  }
+  a {
+    color: var(--clr-gray);
+    &:hover {
+      color: var(--clr-orange);
+    }
+  }
+</style>
