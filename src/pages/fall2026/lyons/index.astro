@@ -16,7 +16,12 @@ import Lyons from "./lyons.html";
 </AuthorLayout>
 
 <style>
-  :root {
+    :global(.text.text > .author-img) {
+    float: none;
+    margin-inline: auto;
+}
+ 
+ :root {
     --clr-bg-primary: var(--clr-bg-fall2026);
   }
   a {
